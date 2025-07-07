@@ -5,7 +5,7 @@ const AboutMe = () => {
     {
       education: 'Formação 1',
       acronym: 'UFPE',
-      fullName: 'Instituição 1',
+      fullName: 'Universidade Federal de Pernambuco',
       courseType: 'Graduação',
       initialYear: 1999,
       finalYear: 2004,
@@ -13,7 +13,7 @@ const AboutMe = () => {
     {
       education: 'Formação 2',
       acronym: 'UFPE',
-      fullName: 'Instituição 2',
+      fullName: 'Universidade Federal de Pernambuco',
       courseType: 'Graduação',
       initialYear: 2000,
       finalYear: 2005,
@@ -21,7 +21,7 @@ const AboutMe = () => {
     {
       education: 'Course 1',
       acronym: 'UFPE',
-      fullName: 'Instituição 3',
+      fullName: 'Universidade Federal de Pernambuco',
       courseType: 'Graduação',
       initialYear: 1999,
       finalYear: 2004,
@@ -29,7 +29,7 @@ const AboutMe = () => {
     {
       education: 'Course 2',
       acronym: 'UFPE',
-      fullName: 'Instituição 4',
+      fullName: 'Universidade Federal de Pernambuco',
       courseType: 'Graduação',
       initialYear: 1999,
       finalYear: 2004,
