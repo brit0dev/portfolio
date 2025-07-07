@@ -92,10 +92,11 @@ const AboutMe = () => {
           </div>
         </div>
         <div className="flex flex-col p-3">
-          <div className="max-h-64 overflow-hidden">
+          <div className="relative max-h-64 overflow-hidden">
             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 gap-4">
               {educationCards.map((item) => EducationCard(item))}
             </div>
+            <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t via-white from-white to-transparent"></div>
           </div>
         </div>
       </div>
