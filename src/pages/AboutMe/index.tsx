@@ -96,6 +96,12 @@ const AboutMe = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 gap-4">
               {educationCards.map((item) => EducationCard(item))}
             </div>
+            <button className="absolute bottom-2 right-0.25 z-10 flex items-center bg-[#574E35] border-[1px] hover:border-[#574E35] transition-all border-[#D3C296] shadow-md rounded-lg overflow-hidden text-white">
+              <span className="bg-[#fff] py-0.5 px-2.5 rounded-md font-semibold text-[#574E35]">
+                Exibir Mais
+              </span>
+              <span className="px-2.5 text-l font-medium">+</span>
+            </button>
             <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t via-white from-white to-transparent"></div>
           </div>
         </div>

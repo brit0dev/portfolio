@@ -16,7 +16,7 @@
 }
 
 #root {
-    flex: 1;
+  flex: 1;
 }
 
 a {
@@ -41,17 +41,9 @@ h1 {
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
 }
 button:focus,
 button:focus-visible {
@@ -67,6 +59,5 @@ button:focus-visible {
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
   }
 }
