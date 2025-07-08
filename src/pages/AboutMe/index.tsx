@@ -68,7 +68,7 @@ const AboutMe = () => {
     },
   ];
   return (
-    <section id="about-me">
+    <section id="about-me" className="min-h-[calc(100vh-72px)] snap-start">
       <h2 className="text-3xl bg-orange-200 p-1 h-18 flex items-center">
         Sobre Mim
       </h2>

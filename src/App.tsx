@@ -4,13 +4,11 @@ import Projects from './pages/Projects';
 
 function App() {
   return (
-    <>
+    <div>
       <Header />
-      <main>
-        <AboutMe />
-        <Projects />
-      </main>
-    </>
+      <AboutMe />
+      <Projects />
+    </div>
   );
 }
 
