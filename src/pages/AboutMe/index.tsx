@@ -1,6 +1,11 @@
 import EducationCard from '../../components/EducationCard';
+import {forwardRef} from 'react';
 
-const AboutMe = () => {
+type SectionProps = {
+  isScrolled: boolean;
+} & React.HTMLAttributes<HTMLElement>;
+
+const AboutMe = forwardRef<HTMLElement, SectionProps>(({}, ref) => {
   const educationCards = [
     {
       education: 'Formação 1',
@@ -67,9 +72,14 @@ const AboutMe = () => {
       finalYear: 2004,
     },
   ];
+
   return (
-    <section id="about-me" className="min-h-[calc(100vh-72px)] snap-start">
-      <h2 className="text-3xl bg-orange-200 p-1 h-18 flex items-center">
+    <section
+      ref={ref}
+      id="about-me"
+      className="min-h-[calc(100vh-72px)] snap-start"
+    >
+      <h2 className="text-3xl bg-orange-200 h-18 flex items-center">
         Sobre Mim
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-[38%_62%]">
@@ -108,6 +118,6 @@ const AboutMe = () => {
       </div>
     </section>
   );
-};
+});
 
 export default AboutMe;
