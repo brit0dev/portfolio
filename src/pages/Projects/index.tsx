@@ -1,11 +1,8 @@
 import ProjectCard from '../../components/ProjectCard';
 import {projects} from './projectData.tsx';
+import type {SectionProps} from '../../types/common';
 
-type SectionProps = {
-  isScrolled: boolean;
-};
-
-const Projects = ({}: SectionProps) => {
+const Projects = ({isScrolled}: SectionProps) => {
   return (
     <section id="projects" className="snap-start h-full snap-always">
       <h2 className="sticky top-0 z-10 text-3xl bg-orange-200 h-18 flex items-center">

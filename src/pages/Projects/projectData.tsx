@@ -5,8 +5,9 @@ import {
   FigmaIcon,
   ExternalLinkIcon,
 } from '../../components/icons';
+import type {Project} from '../../types/pages/projects';
 
-export const projects = [
+export const projects: Project[] = [
   {
     title: 'Social Dogs',
     description: 'A social network for dogs.',

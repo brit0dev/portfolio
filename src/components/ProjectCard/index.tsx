@@ -1,20 +1,7 @@
 import React from 'react';
+import type {Project} from '../../types/pages/projects';
 
-type ProjectCardProps = {
-  title: string;
-  description: string;
-  images: string[];
-  tags: string[];
-  area: string[];
-  technologies: {name: string; icon: React.FC<React.SVGProps<SVGSVGElement>>}[];
-  view?: {
-    type: 'figma' | 'github' | 'demo';
-    link: string;
-    icon: React.FC<React.SVGProps<SVGSVGElement>>;
-  }[];
-};
-
-const ProjectCard: React.FC<ProjectCardProps> = ({
+const ProjectCard = ({
   title,
   description,
   images,
@@ -22,7 +9,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   technologies,
   tags,
   view,
-}) => {
+}: Project) => {
   return (
     <div className="flex flex-col border-[#C38A48] min-w-50 border-1 shadow-sm bg-white rounded-[0.625rem] overflow-hidden">
       <div className="relative  grid grid-cols-2 grid-rows-2 bg-white gap-0.5 h-60">

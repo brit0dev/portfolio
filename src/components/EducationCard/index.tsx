@@ -1,11 +1,4 @@
-type EducationCardType = {
-  education: string;
-  acronym: string;
-  fullName?: string;
-  courseType: string;
-  initialYear: number;
-  finalYear: number;
-};
+import type {Education} from '../../types/pages/aboutme';
 
 const EducationCard = ({
   education,
@@ -14,7 +7,7 @@ const EducationCard = ({
   courseType,
   initialYear,
   finalYear,
-}: EducationCardType) => {
+}: Education) => {
   //<p><span className="font-medium text-[#C38A48] px-1 py-0.5 m-1 border-[#FFC396] border-1 rounded-md">{acronym}</span>{fullName}, {finalYear}</p>
 
   return (
