@@ -1,7 +1,7 @@
-import EducationCard from '../../components/EducationCard';
+import EducationCard from '@/components/pages/AboutMe/EducationCard';
 import {forwardRef} from 'react';
-import type {SectionProps} from '../../types/common';
-import type {Education} from '../../types/pages/aboutme';
+import type {SectionProps} from '@/types/common';
+import type {Education} from '@/types/pages/aboutme';
 
 const AboutMe = forwardRef<HTMLElement, SectionProps>(({isScrolled}, ref) => {
   const educationCards: Education[] = [

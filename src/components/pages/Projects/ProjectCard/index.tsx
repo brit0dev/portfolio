@@ -1,5 +1,5 @@
 import React from 'react';
-import type {Project} from '../../types/pages/projects';
+import type {Project} from '@/types/pages/projects';
 
 const ProjectCard = ({
   title,

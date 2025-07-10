@@ -1,5 +1,5 @@
 import {forwardRef} from 'react';
-import type {SectionProps} from '../../types/common';
+import type {SectionProps} from '@/types/common';
 
 const Header = forwardRef<HTMLElement, SectionProps>(({isScrolled}, ref) => {
   return (

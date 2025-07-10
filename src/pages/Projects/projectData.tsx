@@ -4,8 +4,8 @@ import {
   GithubIcon,
   FigmaIcon,
   ExternalLinkIcon,
-} from '../../components/icons';
-import type {Project} from '../../types/pages/projects';
+} from '@/components/common/icons';
+import type {Project} from '@/types/pages/projects';
 
 export const projects: Project[] = [
   {

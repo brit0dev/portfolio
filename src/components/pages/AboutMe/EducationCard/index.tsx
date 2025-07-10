@@ -1,4 +1,4 @@
-import type {Education} from '../../types/pages/aboutme';
+import type {Education} from '@/types/pages/aboutme';
 
 const EducationCard = ({
   education,

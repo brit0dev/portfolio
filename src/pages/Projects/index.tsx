@@ -1,6 +1,6 @@
-import ProjectCard from '../../components/ProjectCard';
-import {projects} from './projectData.tsx';
-import type {SectionProps} from '../../types/common';
+import ProjectCard from '@/components/pages/Projects/ProjectCard';
+import {projects} from '@/pages/Projects/projectData.tsx';
+import type {SectionProps} from '@/types/common';
 
 const Projects = ({isScrolled}: SectionProps) => {
   return (
