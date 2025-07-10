@@ -2,6 +2,7 @@ import EducationCard from '@/components/pages/AboutMe/EducationCard';
 import {forwardRef} from 'react';
 import type {SectionProps} from '@/types/common';
 import type {Education} from '@/types/pages/aboutme';
+import SectionHeader from '@/components/common/SectionHeader';
 
 const AboutMe = forwardRef<HTMLElement, SectionProps>(({isScrolled}, ref) => {
   const educationCards: Education[] = [
@@ -77,9 +78,9 @@ const AboutMe = forwardRef<HTMLElement, SectionProps>(({isScrolled}, ref) => {
       id="about-me"
       className="min-h-[calc(100vh-72px)] snap-start"
     >
-      <h2 className="text-3xl bg-orange-200 h-18 flex items-center">
+      <SectionHeader isOnPage={isScrolled} dashed>
         Sobre Mim
-      </h2>
+      </SectionHeader>
       <div className="grid grid-cols-1 lg:grid-cols-[38%_62%]">
         <div className="flex flex-col">
           <div className="my-6 mx-12 rounded-2xl h-[320px] overflow-hidden">
