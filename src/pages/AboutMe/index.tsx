@@ -81,16 +81,16 @@ const AboutMe = forwardRef<HTMLElement, SectionProps>(({isScrolled}, ref) => {
       <SectionHeader isOnPage={isScrolled} dashed>
         Sobre Mim
       </SectionHeader>
-      <div className="grid grid-cols-1 lg:grid-cols-[38%_62%]">
+      <div className="grid grid-cols-1 lg:grid-cols-[38%_62%] p-6 gap-0.5">
         <div className="flex flex-col">
-          <div className="my-6 mx-12 rounded-2xl h-[320px] overflow-hidden">
+          <div className="my-3 mx-6 rounded-2xl h-[320px] overflow-hidden">
             <img
               src="https://ellun.com.br/wp-content/uploads/2020/06/shutterstock_374227048.jpg"
               alt="Foto de exemplo"
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="flex-1 p-4">
+          <div className="flex-1 p-2">
             <h3 className="font-bold text-xl mb-2">Bio</h3>
             <p>
               Sou um desenvolvedor fullstack apaixonado por criar soluções
@@ -100,9 +100,9 @@ const AboutMe = forwardRef<HTMLElement, SectionProps>(({isScrolled}, ref) => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col p-3">
+        <div className="flex flex-col p-1">
           <div className="relative max-h-64 overflow-hidden">
-            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 gap-4 p-2">
               {educationCards.map((item) => EducationCard(item))}
             </div>
             <button className="absolute bottom-2 right-0.25 z-10 flex items-center bg-[#574E35] border-[1px] hover:border-[#574E35] transition-all border-[#D3C296] shadow-md rounded-lg overflow-hidden text-white">
