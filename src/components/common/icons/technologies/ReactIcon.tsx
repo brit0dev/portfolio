@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ReactIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
+export const ReactIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg width="40" height="40" {...props} viewBox="0 0 40 40" fill="none">
     <rect width="40" height="40" rx="7.5" fill="black" />
     <path

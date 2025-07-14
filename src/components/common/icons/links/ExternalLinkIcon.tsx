@@ -1,6 +1,8 @@
 import React from 'react';
 
-const ExternalLinkIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
+export const ExternalLinkIcon: React.FC<React.SVGProps<SVGSVGElement>> = (
+  props,
+) => (
   <svg
     width="18"
     height="18"
@@ -19,4 +21,3 @@ const ExternalLinkIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   </svg>
 );
 
-export default ExternalLinkIcon;

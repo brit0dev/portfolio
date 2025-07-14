@@ -3,6 +3,7 @@ import {forwardRef} from 'react';
 import type {SectionProps} from '@/types/common';
 import type {Education} from '@/types/pages/aboutme';
 import SectionHeader from '@/components/common/SectionHeader';
+import HandIcon from '@/components/common/icons/ui/HandIcon';
 
 const AboutMe = forwardRef<HTMLElement, SectionProps>(({isScrolled}, ref) => {
   const educationCards: Education[] = [
@@ -78,7 +79,11 @@ const AboutMe = forwardRef<HTMLElement, SectionProps>(({isScrolled}, ref) => {
       id="about-me"
       className="min-h-[calc(100vh-72px)] snap-start"
     >
-      <SectionHeader isOnPage={isScrolled} dashed>
+      <SectionHeader
+        isOnPage={isScrolled}
+        icon={{SVGComp: HandIcon, offSet: {top: '25%'}}}
+        dashed
+      >
         Sobre Mim
       </SectionHeader>
       <div className="grid grid-cols-1 lg:grid-cols-[38%_62%] p-6 gap-0.5">

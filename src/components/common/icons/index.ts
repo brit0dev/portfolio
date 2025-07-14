@@ -1,7 +1,9 @@
-export {default as JSIcon} from './technologies/JSIcon';
-export {default as NextIcon} from './technologies/NextIcon';
-export {default as ReactIcon} from './technologies/ReactIcon';
+export * from './links/ExternalLinkIcon';
+export * from './links/FigmaIcon';
+export * from './links/GithubIcon';
+export * from './technologies/JSIcon';
+export * from './technologies/NextIcon';
+export * from './technologies/ReactIcon';
+export * from './ui/HandIcon';
+export * from './ui/CodeIcon';
 
-export {default as GithubIcon} from './links/GithubIcon';
-export {default as FigmaIcon} from './links/FigmaIcon';
-export {default as ExternalLinkIcon} from './links/ExternalLinkIcon';

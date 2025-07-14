@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FigmaIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
+export const FigmaIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg width={18} height={18} {...props} viewBox="0 0 15 15">
     <path
       fill-rule="evenodd"

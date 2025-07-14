@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NextIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
+export const NextIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg width="40" height="40" {...props} viewBox="0 0 40 40" fill="none">
     <rect width="40" height="40" rx="7.5" fill="black" />
     <g clip-path="url(#clip0_199_16022)">

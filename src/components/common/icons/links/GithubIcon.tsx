@@ -1,6 +1,6 @@
 import React from 'react';
 
-const GithubIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
+export const GithubIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg fill="#764A19" width={18} height={19} {...props} viewBox="0 0 18 19">
     <path
       fill-rule="evenodd"
