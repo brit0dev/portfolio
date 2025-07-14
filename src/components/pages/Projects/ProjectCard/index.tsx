@@ -16,29 +16,31 @@ const ProjectCard = ({
         {images.length > 2 ? (
           images
             .slice(0, 3)
-            .map((image) => (
+            .map((image, index) => (
               <img
                 src={image}
-                alt={`${title} screenshot 1`}
+                alt={`${title} screenshot ${index}`}
+                key={`${title} screenshot ${index}`}
                 className="first:row-span-2 w-full h-full object-cover"
               />
             ))
         ) : (
           <img
             src={images[0]}
-            alt={`${title} screenshot 1`}
+            alt={`${title} screenshot`}
             className="row-span-2 col-span-2 w-full h-full object-cover"
           />
         )}
 
         <div className="absolute top-1.25 left-1.25 z-1 flex items-center gap-2 px-1.5 bg-[#FFFCF4] border-1 border-[#D3C296] rounded-md overflow-hidden select-none">
-          {area.map((area) => (
-            <>
-              <span className="flex items-center gap-1.25 py-0.25 font-medium text-[#A87C4A]">
-                <span className="p-0.75 h-4 bg-orange-200 rounded-2xl"></span>
-                {area}
-              </span>
-            </>
+          {area.map((area, index) => (
+            <span
+              key={index}
+              className="flex items-center gap-1.25 py-0.25 font-medium text-[#A87C4A]"
+            >
+              <span className="p-0.75 h-4 bg-orange-200 rounded-2xl"></span>
+              {area}
+            </span>
           ))}
         </div>
       </div>

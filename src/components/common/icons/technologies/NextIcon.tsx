@@ -3,7 +3,7 @@ import React from 'react';
 export const NextIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg width="40" height="40" {...props} viewBox="0 0 40 40" fill="none">
     <rect width="40" height="40" rx="7.5" fill="black" />
-    <g clip-path="url(#clip0_199_16022)">
+    <g clipPath="url(#clip0_199_16022)">
       <path
         d="M19.9783 39.8938C30.9808 39.8938 39.9001 30.9745 39.9001 19.9719C39.9001 8.96938 30.9808 0.0500488 19.9783 0.0500488C8.97572 0.0500488 0.0563965 8.96938 0.0563965 19.9719C0.0563965 30.9745 8.97572 39.8938 19.9783 39.8938Z"
         fill="black"
@@ -13,8 +13,8 @@ export const NextIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
         fill="url(#paint0_linear_199_16022)"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M25.512 12.0032H28.168V27.9407H25.512V12.0032Z"
         fill="url(#paint1_linear_199_16022)"
       />
@@ -28,8 +28,8 @@ export const NextIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
         y2="35.5777"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="white" />
-        <stop offset="1" stop-color="white" stop-opacity="0" />
+        <stop stopColor="white" />
+        <stop offset="1" stopColor="white" stopOpacity="0" />
       </linearGradient>
       <linearGradient
         id="paint1_linear_199_16022"
@@ -39,8 +39,8 @@ export const NextIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
         y2="23.7076"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="white" />
-        <stop offset="1" stop-color="white" stop-opacity="0" />
+        <stop stopColor="white" />
+        <stop offset="1" stopColor="white" stopOpacity="0" />
       </linearGradient>
       <clipPath id="clip0_199_16022">
         <rect width="40" height="40" fill="white" />
