@@ -8,7 +8,7 @@ const Stack = ({topic, symbol, stackList}: StackProps) => {
   return (
     <div className="flex items-start flex-col">
       <div className="flex items-end">
-        <div className="2xl:before:content-[' '] 2xl:before:h-2 2xl:before:w-2 2xl:before:bg-[#F8A444] 2xl:before:rounded-full 2xl:py-0 max-2xl:pl-1.5 px-2.5 flex gap-2 items-center justify-center font-bold  text-[#764A19] pt-0.75 text-lg bg-[#FFCE96] rounded-t-2xl">
+        <div className="2xl:before:content-[' '] 2xl:before:h-2 2xl:before:w-2 2xl:before:bg-[#F8A444] 2xl:before:rounded-full 2xl:py-0 max-2xl:pl-1.5 px-2.5 flex gap-2 items-center justify-center font-instrument font-[500] text-[#764A19] pt-0.75 text-lg bg-[#FFCE96] rounded-t-2xl">
           <div className="2xl:hidden flex items-center justify-center px-2.25 w-10 py-1 rounded-2xl bg-[#211900]">
             <img src={symbol} alt={`${topic} symbol`} className="h-3.75" />
           </div>{' '}

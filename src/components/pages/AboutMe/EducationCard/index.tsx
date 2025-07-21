@@ -16,7 +16,9 @@ const EducationCard = ({
         <div className="flex flex-1 w-full justify-between items-center">
           <div className="flex gap-1.5 items-center">
             <span className="p-0.75 h-4 bg-orange-200 rounded-2xl"></span>
-            <h4 className="font-bold text-lg text-[#211900]">{education}</h4>
+            <h4 className="font-semibold text-lg text-[#211900]">
+              {education}
+            </h4>
           </div>
           <span className="border-1 border-[#8AE82B] text-[#5D7237] text-[0.8rem] rounded-md px-1.75 py-0.25 bg-[#CAFF74]">
             Concluído

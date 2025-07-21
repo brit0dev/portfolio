@@ -164,7 +164,7 @@ const AboutMe = forwardRef<HTMLElement, SectionProps>(({isScrolled}, ref) => {
           </div>
         </div>
         <div className="lg:col-span-2 xl:col-start-2 xl:row-start-2">
-          <h3 className="font-bold text-2xl mb-2">
+          <h3 className="font-bold text-2xl mb-2 font-instrument">
             <span className="text-orange-200">#</span> Tech Stack
           </h3>
           <div className="flex flex-col gap-2 px-2 lg:px-6 py-1">

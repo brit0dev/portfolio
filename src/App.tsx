@@ -15,7 +15,7 @@ function App() {
   });
 
   return (
-    <div>
+    <div className="font-body">
       <Header ref={headerRef} isScrolled={aboutMeScroll} />
       <AboutMe ref={aboutMeRef} isScrolled={aboutMeScroll} />
       <Projects isScrolled={projectsScroll} />

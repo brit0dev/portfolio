@@ -17,7 +17,7 @@ const SectionHeader = ({
 
   return (
     <div
-      className={`text-3xl h-18 flex items-center gap-1 ${onPageClasses} ${stickyClasses} ${shadow} ${isOnPage && borderType} select-none transition duration-200`}
+      className={`text-3xl font-instrument h-18 flex items-center gap-1 ${onPageClasses} ${stickyClasses} ${shadow} ${isOnPage && borderType} select-none transition duration-200`}
     >
       <div className=" flex py-1 h-12 w-14.5 bg-orange-200 rounded-r-[0.625rem]">
         <div className="w-1.5 bg-[#F6B76E] rounded-r-[0.625rem]"></div>

@@ -5,7 +5,7 @@ const Header = forwardRef<HTMLElement, SectionProps>(({isScrolled}, ref) => {
   return (
     <header
       ref={ref}
-      className="w-full h-[calc(100vh-72px)] snap-start bg-orange-200"
+      className="w-full h-[calc(100vh-72px)] snap-start bg-orange-200 font-instrument"
     >
       <div
         className={`relative flex items-center h-full w-full p-8 bg-[#FDF6E4] rounded-xl transition-all duration-200 ${
