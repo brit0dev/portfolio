@@ -154,13 +154,13 @@ const AboutMe = forwardRef<HTMLElement, SectionProps>(({isScrolled}, ref) => {
                 <EducationCard key={index} {...item} />
               ))}
             </div>
-            <button className="absolute bottom-2 right-0.25 z-10 flex items-center bg-[#574E35] border-[1px] hover:border-[#574E35] transition-all border-[#D3C296] shadow-md rounded-lg overflow-hidden text-white">
-              <span className="bg-[#fff] py-0.5 px-2.5 rounded-md font-semibold text-[#574E35]">
+            <button className="absolute bottom-2 right-0.25 z-10 flex items-center bg-button-text border-[1px] hover:border-button-text transition-all border-button-border shadow-md rounded-lg overflow-hidden text-white">
+              <span className="bg-button py-0.5 px-2.5 rounded-md font-semibold text-button-text hover:text-text-primary hover:transition">
                 Exibir Mais
               </span>
               <span className="px-2.5 text-l font-medium">+</span>
             </button>
-            <div className="absolute bottom-0 left-0 right-0 h-18 bg-gradient-to-t via-white from-white to-transparent"></div>
+            <div className="absolute bottom-0 left-0 right-0 h-18 bg-gradient-to-t via-background from-background to-transparent"></div>
           </div>
         </div>
         <div className="lg:col-span-2 xl:col-start-2 xl:row-start-2">

@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const GithubIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
-  <svg fill="#764A19" width={18} height={19} {...props} viewBox="0 0 18 19">
+  <svg fill="currentColor" width={18} height={19} {...props} viewBox="0 0 18 19">
     <path
       fillRule="evenodd"
       clipRule="evenodd"
