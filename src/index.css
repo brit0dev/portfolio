@@ -36,6 +36,19 @@
   --color-success-border: #8ae82b;
 }
 
+@layer components {
+  ul.contact-list > li > div,
+  ul.social-list li > a > div {
+    @apply w-8 h-7.5 flex items-center justify-center text-primary;
+  }
+  ul.contact-list > li {
+    @apply flex gap-2 items-center;
+  }
+  ul.social-list > li > a {
+    @apply flex gap-0.5 items-center py-1.5 px-1.25 text-text-label font-medium hover:opacity-85 hover:bg-background-header transition;
+  }
+}
+
 :root {
   line-height: 1.5;
   font-weight: 400;
