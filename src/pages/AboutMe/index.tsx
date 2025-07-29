@@ -132,9 +132,9 @@ const AboutMe = forwardRef<HTMLElement, SectionProps>(({isScrolled}, ref) => {
       >
         Sobre mim
       </SectionHeader>
-      <div className="grid grid-cols-1 items-start lg:grid-cols-[minmax(33rem,37%)_1fr] md:grid-rows-[repeat(3,auto)] pt-6 pb-3 px-3 2xl:px-6 gap-0.5 2xl:gap-x-2.5">
+      <div className="md:max-w-220 lg:max-w-285 xl:max-w-full m-auto grid grid-cols-1 items-start lg:grid-cols-[minmax(33rem,37%)_1fr] md:grid-rows-[repeat(3,auto)] pt-6 pb-3 px-3 2xl:px-6 max-xl:gap-y-5 gap-0.5 2xl:gap-x-2.5">
         <div className="flex w-full justify-center px-2.5 lg:px-4 md:col-span-2 xl:col-span-1 xl:row-span-2">
-          <div className="grid px-2 flex-1 md:max-w-215 lg:max-w-270 xl:px-3 py-2 xl:py-3 md:grid-cols-[1fr_auto] gap-2 xl:grid-cols-1 md:col-span-2 xl:col-span-1  bg-background-light shadow rounded-2xl">
+          <div className="grid px-2 flex-1 xl:px-3 py-2 xl:py-3 md:grid-cols-[1fr_auto] gap-2 xl:grid-cols-1 md:col-span-2 xl:col-span-1  bg-background-light shadow rounded-2xl">
             <div
               id="bio-image"
               className="relative min-w-90 rounded-2xl h-[320px] overflow-hidden"
@@ -150,7 +150,7 @@ const AboutMe = forwardRef<HTMLElement, SectionProps>(({isScrolled}, ref) => {
             </div>
             <div
               id="bio-content"
-              className="relative flex flex-col gap-2 2xl:gap-2.5 md:max-w-110 lg:max-w-126 xl:max-w-full justify-center md:px-2 py-1"
+              className="relative flex flex-col max-sm:gap-y-2.5 gap-2 2xl:gap-2.5 md:max-w-110 lg:max-w-126 xl:max-w-full justify-center px-1 md:px-2 py-1"
             >
               <div className="flex flex-col justify-between">
                 <p className="indent-3">
@@ -168,7 +168,7 @@ const AboutMe = forwardRef<HTMLElement, SectionProps>(({isScrolled}, ref) => {
                 </p>
               </div>
               <div className="h-1.25 rounded-4xl border-1 border-text-primary bg-background-light md:col-span-2"></div>
-              <div className="grid grid-cols-[1fr_auto] grid-rows-[auto_auto]">
+              <div className="grid grid-cols-[1fr_auto] grid-rows-[auto_auto] max-sm:gap-y-2.5">
                 <ul className="contact-list grid grid-cols-[repeat(auto-fit,minmax(15rem,1fr))] px-1 sm:row-span-2 xl:row-span-1">
                   <li>
                     <div>
@@ -217,11 +217,11 @@ const AboutMe = forwardRef<HTMLElement, SectionProps>(({isScrolled}, ref) => {
             <div className="absolute bottom-0 left-0 right-0 h-18 bg-gradient-to-t via-background from-background to-transparent"></div>
           </div>
         </div>
-        <div className="lg:col-span-2 xl:col-start-2 xl:row-start-2">
+        <div className=" max-xl:mb-10 lg:col-span-2 xl:col-start-2 xl:row-start-2">
           <h3 className="font-bold text-2xl mb-2 font-instrument">
             <span className="text-orange-200">#</span> Tech Stack:
           </h3>
-          <div className="flex flex-col gap-2 px-2 2xl:px-6 py-1">
+          <div className="flex flex-col gap-2 lg:grid lg:grid-cols-2 lg:gap-4 xl:flex xl:flex-col xl:gap-2 px-2 2xl:px-6 py-1">
             {stackList.map((stack, index) => (
               <Stack key={index} {...stack} />
             ))}

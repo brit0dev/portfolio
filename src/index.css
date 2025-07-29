@@ -45,7 +45,7 @@
     @apply flex gap-2 items-center;
   }
   ul.social-list > li > a {
-    @apply flex gap-0.5 items-center py-1.5 px-1.25 text-text-label font-medium hover:opacity-85 hover:bg-background-header transition;
+    @apply flex gap-0.5 items-center py-1.5 px-1.25 text-text-label font-medium hover:opacity-85 lg:hover:bg-background-header transition;
   }
 }
 

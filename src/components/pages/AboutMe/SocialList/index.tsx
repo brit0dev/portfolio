@@ -4,7 +4,7 @@ import LinkedInIcon from '@/components/common/icons/links/LinkedInIcon';
 
 const SocialList = () => {
   return (
-    <ul className="social-list bg-background-light flex justify-around shadow rounded-lg sm:rounded-xl xl:rounded-lg border-1 lg:border-1 xl:border-1 border-primary-dark overflow-hidden">
+    <ul className="social-list bg-background-light max-sm:w-full flex justify-around shadow rounded-lg sm:rounded-xl xl:rounded-lg border-1 lg:border-1 xl:border-1 border-primary-dark overflow-hidden">
       <li>
         <a className="pl-3" href="/">
           <div>
