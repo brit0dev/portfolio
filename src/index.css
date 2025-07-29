@@ -47,6 +47,14 @@
   ul.social-list > li > a {
     @apply flex gap-0.5 items-center py-1.5 px-1.25 text-text-label font-medium hover:opacity-85 lg:hover:bg-background-header transition;
   }
+  .project-card-separator {
+    @apply bg-[length:50%_1px];
+    background-image: linear-gradient(
+      to right,
+      var(--color-secondary) 55%,
+      var(--color-secondary-darker) 45%
+    );
+  }
 }
 
 :root {

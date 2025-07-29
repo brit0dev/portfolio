@@ -15,7 +15,7 @@ const Projects = ({isScrolled}: SectionProps) => {
       >
         Projetos
       </SectionHeader>
-      <div className="grid bg-background grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 py-5 px-7 ">
+      <div className="grid bg-background-light grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 py-5 px-7 ">
         {projects.map((project, index) => (
           <ProjectCard key={index} {...project} />
         ))}

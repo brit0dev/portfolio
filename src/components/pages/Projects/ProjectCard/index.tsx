@@ -45,7 +45,7 @@ const ProjectCard = ({
         </div>
       </div>
 
-      <div className="relative flex h-0.75 bg-primary">
+      <div className="relative flex h-0.75 bg-secondary">
         <div className="absolute flex h-11 bg-background-light gap-1 py-0.5 px-1 -top-6 right-1.5 drop-shadow-md rounded-lg">
           {technologies.map((item) => {
             const Icon = item.icon;
@@ -80,7 +80,7 @@ const ProjectCard = ({
 
           {view && (
             <div className="relative">
-              <div className="z-0 relative flex items-center bg-primary border-1 border-b-0 border-r-0 border-primary-dark text-white px-2.75 p-1 rounded-tl-lg space-x-2">
+              <div className="z-0 relative flex items-center bg-secondary-darker border-1 border-b-0 border-r-0 border-primary-dark text-white px-2.75 p-1 rounded-tl-lg space-x-2">
                 {view.map((item, index) => {
                   const Icon = item.icon;
                   return (
@@ -90,7 +90,7 @@ const ProjectCard = ({
                         target="_blank"
                         rel="noopener noreferrer"
                         title={item.type}
-                        className="flex gap-1.25 items-center font-medium text-text-label hover:opacity-60 transition-all capitalize"
+                        className="flex gap-1.25 items-center  font-medium text-background hover:opacity-60 transition-all capitalize"
                       >
                         <Icon width={18} height={18} />
                         {item.type}
@@ -103,10 +103,10 @@ const ProjectCard = ({
                 })}
               </div>
 
-              <div className="absolute -bottom-[1px] -left-[calc(0.75rem-1px)] w-3 h-4 bg-primary rounded-tl-full z-1"></div>
+              <div className="absolute -bottom-[1px] -left-[calc(0.75rem-1px)] w-3 h-4 bg-secondary-darker rounded-tl-full z-1"></div>
               <div className="absolute -bottom-[1px] -left-[calc(0.75rem-1px)] w-3 h-4 bg-background-light border-r-1 border-b-1 border-primary-dark rounded-br-full z-2"></div>
 
-              <div className="absolute -top-[calc(1rem-1px)] -right-[1px] w-3 h-4 bg-primary rounded-tl-full z-1"></div>
+              <div className="absolute -top-[calc(1rem-1px)] -right-[1px] w-3 h-4 bg-secondary-darker rounded-tl-full z-1"></div>
               <div className="absolute -top-[calc(1rem-1px)] -right-[1px] w-3 h-4 bg-background-light border-r-1 border-b-1 border-primary-dark rounded-br-full z-2"></div>
             </div>
           )}
