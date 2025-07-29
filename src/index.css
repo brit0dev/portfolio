@@ -39,7 +39,13 @@
 @layer components {
   ul.contact-list > li > div,
   ul.social-list li > a > div {
-    @apply w-8 h-7.5 flex items-center justify-center text-primary;
+    @apply w-8 h-7.5 flex items-center justify-center;
+  }
+  ul.social-list li > a > div {
+    @apply text-primary;
+  }
+  ul.contact-list li > div {
+    @apply text-text-primary;
   }
   ul.contact-list > li {
     @apply flex gap-2 items-center;
