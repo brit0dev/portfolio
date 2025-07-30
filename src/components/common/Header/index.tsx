@@ -5,18 +5,18 @@ const Header = forwardRef<HTMLElement, SectionProps>(({isScrolled}, ref) => {
   return (
     <header
       ref={ref}
-      className="w-full h-[calc(100dvh-72px)] snap-start bg-primary font-instrument"
+      className="w-full h-[calc(100dvh-72px)] xl:snap-start bg-primary font-instrument"
     >
       <div
         className={`relative flex items-center h-full w-full p-8 bg-background-header rounded-b-xl transition-all duration-200 ${
           isScrolled ? 'shadow-none' : 'shadow-sm'
         }`}
       >
-        <div className="ml-30">
-          <h1 className="text-[3.5rem] font-semibold leading-11">
+        <div className=" ml:5 sm:ml-10 lg:ml-20 xl:ml-30">
+          <h1 className="text-[2.75rem] xs:text-[3.5rem] font-semibold leading-10 xs:leading-14">
             <span className="opacity-35 text-text-light">Hi</span>
             , Matheus Brito <br />
-            <span className="text-[2rem]">
+            <span className="text-2xl xs:text-[2rem]">
               Fullstack &lt;dev
               <span className="text-secondary-darker">/</span>
               &gt;

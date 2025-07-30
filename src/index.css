@@ -1,6 +1,8 @@
 @import 'tailwindcss';
 
 @theme {
+  --breakpoint-xs: 25rem;
+
   --font-instrument: Instrument Sans, sans-serif;
 
   --color-base-dark: #0d0d0d;
