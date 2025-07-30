@@ -6,7 +6,7 @@ import {CodeIcon} from '@/components/common/icons';
 
 const Projects = ({isScrolled}: SectionProps) => {
   return (
-    <section id="projects" className="snap-start h-full snap-always">
+    <section id="projects" className="xl:snap-start h-full ">
       <SectionHeader
         isSticky
         isOnPage={isScrolled}

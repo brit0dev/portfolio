@@ -123,7 +123,7 @@ const AboutMe = forwardRef<HTMLElement, SectionProps>(({isScrolled}, ref) => {
     <section
       ref={ref}
       id="about-me"
-      className="min-h-[calc(100vh-72px)] snap-start"
+      className="min-h-[calc(100vh-72px)] xl:snap-start"
     >
       <SectionHeader
         isOnPage={isScrolled}
