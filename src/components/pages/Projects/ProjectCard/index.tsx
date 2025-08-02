@@ -12,7 +12,7 @@ const ProjectCard = ({
 }: Project) => {
   return (
     <div className="flex flex-col border-primary-dark min-w-50 border-1 shadow-sm bg-background-light rounded-[0.625rem] overflow-hidden">
-      <div className="relative  grid grid-cols-2 grid-rows-2 bg-background-light gap-0.5 h-60">
+      <div className="relative  grid grid-cols-2 grid-rows-2 bg-background-light gap-0.5 h-53 xs:h-60">
         {images.length > 2 ? (
           images
             .slice(0, 3)
@@ -62,7 +62,6 @@ const ProjectCard = ({
           </div>
           <p className="font-medium text-text-secondary">{description}</p>
         </div>
-
         <div className="flex justify-between items-end">
           <div className="relative flex flex-1 flex-nowrap overflow-hidden gap-1.25 p-0.75">
             {tags.map((tag, index) => (
@@ -104,10 +103,10 @@ const ProjectCard = ({
               </div>
 
               <div className="absolute -bottom-[1px] -left-[calc(0.75rem-1px)] w-3 h-4 bg-secondary-darker rounded-tl-full z-1"></div>
-              <div className="absolute -bottom-[1px] -left-[calc(0.75rem-1px)] w-3 h-4 bg-background-light border-r-1 border-b-1 border-primary-dark rounded-br-full z-2"></div>
+              <div className="absolute -bottom-[1px] -left-[calc(0.75rem-1px)] w-3 h-4 bg-background border-r-1 border-b-1 border-primary-dark rounded-br-full z-2"></div>
 
               <div className="absolute -top-[calc(1rem-1px)] -right-[1px] w-3 h-4 bg-secondary-darker rounded-tl-full z-1"></div>
-              <div className="absolute -top-[calc(1rem-1px)] -right-[1px] w-3 h-4 bg-background-light border-r-1 border-b-1 border-primary-dark rounded-br-full z-2"></div>
+              <div className="absolute -top-[calc(1rem-1px)] -right-[1px] w-3 h-4 bg-background border-r-1 border-b-1 border-primary-dark rounded-br-full z-2"></div>
             </div>
           )}
         </div>

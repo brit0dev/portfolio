@@ -14,6 +14,7 @@ import LocationIcon from '@/components/common/icons/links/LocationIcon';
 import PhoneIcon from '@/components/common/icons/links/PhoneIcon';
 import EmailIcon from '@/components/common/icons/links/EmailIcon';
 import SocialList from '@/components/pages/AboutMe/SocialList';
+import {useIsMobile} from '@/hooks/useIsMobile';
 
 const AboutMe = forwardRef<HTMLElement, SectionProps>(({isScrolled}, ref) => {
   const educationCards: Education[] = [
@@ -119,11 +120,13 @@ const AboutMe = forwardRef<HTMLElement, SectionProps>(({isScrolled}, ref) => {
       stackList: ['Test-Driven Development', 'Domain Driven Design'],
     },
   ];
+
+  const isMobile = useIsMobile();
   return (
     <section
       ref={ref}
       id="about-me"
-      className="min-h-[calc(100vh-72px)] xl:snap-start"
+      className={`min-h-[calc(100vh-72px)] ${!isMobile && 'snap-start'}`}
     >
       <SectionHeader
         isOnPage={isScrolled}
@@ -132,12 +135,15 @@ const AboutMe = forwardRef<HTMLElement, SectionProps>(({isScrolled}, ref) => {
       >
         Sobre mim
       </SectionHeader>
-      <div className="md:max-w-220 lg:max-w-285 xl:max-w-full m-auto grid grid-cols-1 items-start lg:grid-cols-[minmax(33rem,37%)_1fr] md:grid-rows-[repeat(3,auto)] pt-6 pb-3 px-3 2xl:px-6 max-xl:gap-y-5 gap-0.5 2xl:gap-x-2.5">
-        <div className="flex w-full justify-center px-2.5 lg:px-4 md:col-span-2 xl:col-span-1 xl:row-span-2">
+      <div className="md:max-w-220 lg:max-w-285 xl:max-w-full m-auto grid grid-cols-1 lg:grid-cols-[minmax(33rem,37%)_1fr] md:grid-rows-[repeat(3,auto)] items-start pt-4 xs:pt-6 pb-3 px-1 xs:px-3 2xl:px-6 max-xl:gap-y-5 gap-0.5 2xl:gap-x-2.5">
+        <div
+          id="bio-container"
+          className="flex w-full justify-center px-1 xs:px-2.5 lg:px-4 xl:row-span-2"
+        >
           <div className="grid px-2 flex-1 xl:px-3 py-2 xl:py-3 md:grid-cols-[1fr_auto] gap-2 xl:grid-cols-1 md:col-span-2 xl:col-span-1  bg-background-light shadow rounded-2xl">
             <div
               id="bio-image"
-              className="relative min-w-90 rounded-2xl h-[320px] overflow-hidden"
+              className="relative xs:min-w-90 rounded-2xl h-[320px] overflow-hidden"
             >
               <img
                 src="https://ellun.com.br/wp-content/uploads/2020/06/shutterstock_374227048.jpg"
@@ -198,12 +204,12 @@ const AboutMe = forwardRef<HTMLElement, SectionProps>(({isScrolled}, ref) => {
             </div>
           </div>
         </div>
-        <div className="max-xl:col-span-2 flex flex-col p-1">
+        <div id="education-container" className="flex-col p-1">
           <h3 className="font-bold text-2xl mb-2 font-instrument">
             <span className="text-orange-200">#</span> Escolaridade:
           </h3>
           <div className="relative max-h-58 overflow-hidden">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-4 gap-4 p-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-4 gap-4 p-1 xs:p-2">
               {educationCards.map((item, index) => (
                 <EducationCard key={index} {...item} />
               ))}
@@ -217,11 +223,14 @@ const AboutMe = forwardRef<HTMLElement, SectionProps>(({isScrolled}, ref) => {
             <div className="absolute bottom-0 left-0 right-0 h-18 bg-gradient-to-t via-background from-background to-transparent"></div>
           </div>
         </div>
-        <div className=" max-xl:mb-10 lg:col-span-2 xl:col-start-2 xl:row-start-2">
+        <div
+          id="tech-stack-container"
+          className=" max-xl:mb-10 xl:col-start-2 xl:row-start-2"
+        >
           <h3 className="font-bold text-2xl mb-2 font-instrument">
             <span className="text-orange-200">#</span> Tech Stack:
           </h3>
-          <div className="flex flex-col gap-2 lg:grid lg:grid-cols-2 lg:gap-4 xl:flex xl:flex-col xl:gap-2 px-2 2xl:px-6 py-1">
+          <div className="flex flex-col gap-2 lg:grid lg:grid-cols-2 lg:gap-4 xl:flex xl:flex-col xl:gap-2 px-1.5 2xl:px-6 py-1">
             {stackList.map((stack, index) => (
               <Stack key={index} {...stack} />
             ))}

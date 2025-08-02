@@ -6,7 +6,7 @@ const SocialList = () => {
   return (
     <ul className="social-list bg-background-light max-sm:w-full flex justify-around shadow rounded-lg sm:rounded-xl xl:rounded-lg border-1 lg:border-1 xl:border-1 border-primary-dark overflow-hidden">
       <li>
-        <a className="pl-3" href="/">
+        <a className="pl-1 xs:pl-3" href="/">
           <div>
             <InstagramIcon />
           </div>
@@ -22,7 +22,7 @@ const SocialList = () => {
         </a>
       </li>
       <li>
-        <a className="pr-3.5" href="/">
+        <a className="pr-2 xs:pr-3.5" href="/">
           <div>
             <LinkedInIcon />
           </div>
