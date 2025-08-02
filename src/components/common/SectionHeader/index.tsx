@@ -22,7 +22,7 @@ const SectionHeader = ({
 
   return (
     <div
-      className={`${!isMobile && 'snap-end'} text-3xl font-instrument h-16 xs:h-18 flex items-center gap-1 ${onPageClasses} ${stickyClasses} ${shadow} ${isOnPage && borderType} select-none transition duration-200`}
+      className={` relative ${!isMobile && 'snap-end'} text-3xl font-instrument h-16 xs:h-18 flex items-center gap-1 ${onPageClasses} ${stickyClasses} ${shadow} ${isOnPage && borderType} select-none transition duration-200`}
     >
       <div className=" flex py-1 h-10 xs:h-12 w-14 xs:w-14.5 bg-primary rounded-r-[0.625rem]">
         <div className="w-1.25 xs:w-1.5 bg-secondary-dark rounded-r-[0.625rem]"></div>
