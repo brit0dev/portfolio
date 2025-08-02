@@ -14,7 +14,11 @@ const SocialList = () => {
         </a>
       </li>
       <li>
-        <a href="/">
+        <a
+          href="https://github.com/brit0dev"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           <div>
             <GithubIcon />
           </div>
@@ -22,7 +26,12 @@ const SocialList = () => {
         </a>
       </li>
       <li>
-        <a className="pr-2 xs:pr-3.5" href="/">
+        <a
+          className="pr-2 xs:pr-3.5"
+          href="https://www.linkedin.com/in/mhenriquebrito"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           <div>
             <LinkedInIcon />
           </div>
