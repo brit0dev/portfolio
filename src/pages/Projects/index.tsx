@@ -1,5 +1,5 @@
 import ProjectCard from '@/components/pages/Projects/ProjectCard';
-import {projects} from '@/pages/Projects/projectData.tsx';
+import {projects} from '@/data/projects.ts';
 import type {SectionProps} from '@/types/common';
 import SectionHeader from '@/components/common/SectionHeader';
 import {CodeIcon} from '@/components/common/icons';

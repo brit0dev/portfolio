@@ -1,126 +1,21 @@
 import EducationCard from '@/components/pages/AboutMe/EducationCard';
 import {forwardRef} from 'react';
-import type {SectionProps} from '@/types/common';
-import type {Education} from '@/types/pages/aboutme';
-import SectionHeader from '@/components/common/SectionHeader';
-import HandIcon from '@/components/common/icons/ui/HandIcon';
-import Stack from '@/components/pages/AboutMe/Stack';
 
-import ArchitecturesIcon from '@/assets/ArchitecturesIcon.svg';
-import DatabaseIcon from '@/assets/DatabaseIcon.svg';
-import FrameworksIcon from '@/assets/FrameworksIcon.svg';
-import LanguagesIcon from '@/assets/LanguagesIcon.svg';
+import type {SectionProps} from '@/types/common';
+
+import {educationCards, stackList} from '@/data/about.ts';
+
+import Stack from '@/components/pages/AboutMe/Stack';
+import SectionHeader from '@/components/common/SectionHeader';
+import SocialList from '@/components/pages/AboutMe/SocialList';
+import HandIcon from '@/components/common/icons/ui/HandIcon';
 import LocationIcon from '@/components/common/icons/links/LocationIcon';
 import PhoneIcon from '@/components/common/icons/links/PhoneIcon';
 import EmailIcon from '@/components/common/icons/links/EmailIcon';
-import SocialList from '@/components/pages/AboutMe/SocialList';
+
 import {useIsMobile} from '@/hooks/useIsMobile';
 
 const AboutMe = forwardRef<HTMLElement, SectionProps>(({isScrolled}, ref) => {
-  const educationCards: Education[] = [
-    {
-      education: 'Formação 1',
-      acronym: 'UFPE',
-      fullName: 'Universidade Federal de Pernambuco',
-      courseType: 'Graduação',
-      initialYear: 1999,
-      finalYear: 2004,
-    },
-    {
-      education: 'Formação 2',
-      acronym: 'UFPE',
-      fullName: 'Universidade Federal de Pernambuco',
-      courseType: 'Graduação',
-      initialYear: 2000,
-      finalYear: 2005,
-    },
-    {
-      education: 'Course 1',
-      acronym: 'UFPE',
-      fullName: 'Universidade Federal de Pernambuco',
-      courseType: 'Graduação',
-      initialYear: 1999,
-      finalYear: 2004,
-    },
-    {
-      education: 'Course 2',
-      acronym: 'UFPE',
-      fullName: 'Universidade Federal de Pernambuco',
-      courseType: 'Graduação',
-      initialYear: 1999,
-      finalYear: 2004,
-    },
-    {
-      education: 'Formação 1',
-      acronym: 'UFPE',
-      fullName: 'Universidade Federal de Pernambuco',
-      courseType: 'Graduação',
-      initialYear: 1999,
-      finalYear: 2004,
-    },
-    {
-      education: 'Formação 2',
-      acronym: 'UFPE',
-      fullName: 'Universidade Federal de Pernambuco',
-      courseType: 'Graduação',
-      initialYear: 2000,
-      finalYear: 2005,
-    },
-    {
-      education: 'Course 1',
-      acronym: 'UFPE',
-      fullName: 'Universidade Federal de Pernambuco',
-      courseType: 'Graduação',
-      initialYear: 1999,
-      finalYear: 2004,
-    },
-    {
-      education: 'Course 2',
-      acronym: 'UFPE',
-      fullName: 'Universidade Federal de Pernambuco',
-      courseType: 'Graduação',
-      initialYear: 1999,
-      finalYear: 2004,
-    },
-  ];
-  const stackList = [
-    {
-      topic: 'Languages',
-      symbol: LanguagesIcon,
-      stackList: ['Java', 'Typescript', 'Javascript', 'Python', 'C (Beginner)'],
-    },
-    {
-      topic: 'Database',
-      symbol: DatabaseIcon,
-      stackList: [
-        'Postgresql',
-        'MongoDB',
-        'Redis',
-        'TypeORM',
-        'Hibernate',
-        'Mongoose',
-      ],
-    },
-    {
-      topic: 'Frameworks/Libs',
-      symbol: FrameworksIcon,
-      stackList: [
-        'ReactJS',
-        'React Native',
-        'Spring Boot',
-        'Node.js',
-        'Express.js',
-        'Tailwind',
-        'Bootstrap',
-      ],
-    },
-    {
-      topic: 'Architecture',
-      symbol: ArchitecturesIcon,
-      stackList: ['Test-Driven Development', 'Domain Driven Design'],
-    },
-  ];
-
   const isMobile = useIsMobile();
   return (
     <section
