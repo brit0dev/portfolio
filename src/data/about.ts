@@ -12,6 +12,8 @@ export const educationCards: Education[] = [
     courseType: 'Graduação',
     initialYear: 1999,
     finalYear: 2004,
+
+    status: 'Completed',
   },
   {
     education: 'Formação 2',
@@ -20,6 +22,7 @@ export const educationCards: Education[] = [
     courseType: 'Graduação',
     initialYear: 2000,
     finalYear: 2005,
+    status: 'Completed',
   },
   {
     education: 'Course 1',
@@ -28,6 +31,7 @@ export const educationCards: Education[] = [
     courseType: 'Graduação',
     initialYear: 1999,
     finalYear: 2004,
+    status: 'Completed',
   },
   {
     education: 'Course 2',
@@ -36,6 +40,7 @@ export const educationCards: Education[] = [
     courseType: 'Graduação',
     initialYear: 1999,
     finalYear: 2004,
+    status: 'Completed',
   },
   {
     education: 'Formação 1',
@@ -44,6 +49,7 @@ export const educationCards: Education[] = [
     courseType: 'Graduação',
     initialYear: 1999,
     finalYear: 2004,
+    status: 'Completed',
   },
   {
     education: 'Formação 2',
@@ -52,6 +58,7 @@ export const educationCards: Education[] = [
     courseType: 'Graduação',
     initialYear: 2000,
     finalYear: 2005,
+    status: 'Completed',
   },
   {
     education: 'Course 1',
@@ -60,6 +67,7 @@ export const educationCards: Education[] = [
     courseType: 'Graduação',
     initialYear: 1999,
     finalYear: 2004,
+    status: 'Completed',
   },
   {
     education: 'Course 2',
@@ -68,6 +76,7 @@ export const educationCards: Education[] = [
     courseType: 'Graduação',
     initialYear: 1999,
     finalYear: 2004,
+    status: 'Completed',
   },
 ];
 

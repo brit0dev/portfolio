@@ -36,6 +36,14 @@
   --color-success: #caff74;
   --color-success-text: #5d7237;
   --color-success-border: #8ae82b;
+
+  --color-ongoing: #fdd35d;
+  --color-ongoing-text: #8a6901;
+  --color-ongoing-border: #8a6901;
+
+  --color-incomplete: #99ccff;
+  --color-incomplete-text: #436f92;
+  --color-incomplete-border: #2b6fff;
 }
 
 @layer components {

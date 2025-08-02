@@ -1,3 +1,8 @@
+export type EducationStatus =
+  | 'Completed'
+  | 'In progress'
+  | 'Partially Completed';
+
 export type Education = {
   education: string;
   acronym: string;
@@ -5,4 +10,5 @@ export type Education = {
   courseType: string;
   initialYear: number;
   finalYear: number;
+  status: EducationStatus;
 };

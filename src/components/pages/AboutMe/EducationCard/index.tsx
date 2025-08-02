@@ -1,4 +1,4 @@
-import type {Education} from '@/types/pages/aboutme';
+import type {Education, EducationStatus} from '@/types/pages/aboutme';
 
 const EducationCard = ({
   education,
@@ -7,8 +7,30 @@ const EducationCard = ({
   courseType,
   initialYear,
   finalYear,
+  status,
 }: Education) => {
-  //<p><span className="font-medium text-primary-dark px-1 py-0.5 m-1 border-primary border-1 rounded-md">{acronym}</span>{fullName}, {finalYear}</p>
+  const statusStyles: Record<
+    EducationStatus,
+    {base: string; text: string; border: string}
+  > = {
+    Completed: {
+      base: 'bg-success',
+      text: 'text-success-text',
+      border: 'border-success-border',
+    },
+    'In progress': {
+      base: 'bg-ongoing',
+      text: 'text-ongoing-text',
+      border: 'border-ongoing-border',
+    },
+    'Partially Completed': {
+      base: 'bg-incomplete',
+      text: 'text-incomplete-text',
+      border: 'border-incomplete-border',
+    },
+  };
+
+  const currentStatusStyle = statusStyles[status];
 
   return (
     <div className="bg-primary pl-1 rounded-lg border-primary-dark min-w-50 border-1 shadow-sm">
@@ -20,8 +42,10 @@ const EducationCard = ({
               {education}
             </h4>
           </div>
-          <span className="border-1 border-success-border text-success-text text-[0.8rem] rounded-md px-1.75 py-0.25 bg-success">
-            Concluído
+          <span
+            className={`border-1 text-[0.8rem] rounded-md px-1.75 py-0.25 ${currentStatusStyle.base} ${currentStatusStyle.text} ${currentStatusStyle.border}`}
+          >
+            {status}
           </span>
         </div>
         <div className="flex w-full flex-col gap-1 items-start">
@@ -34,7 +58,9 @@ const EducationCard = ({
           <div className="flex items-center py-[1px] pr-[1px] text-[#764A19] bg-primary border-primary-dark border-1 border-l-3 rounded-md text-sm">
             <span className="px-2.5 py-0">{courseType}</span>
             <span className="bg-background-light py-0.5 px-1.5 rounded-md">
-              {initialYear} - {finalYear}
+              {initialYear === finalYear
+                ? initialYear
+                : `${initialYear} - ${finalYear}`}
             </span>
           </div>
         </div>
