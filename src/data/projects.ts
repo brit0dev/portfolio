@@ -4,6 +4,7 @@ import {
   GithubIcon,
   FigmaIcon,
   ExternalLinkIcon,
+  ReactIcon,
 } from '@/components/common/icons';
 import type {Project} from '@/types/pages/projects';
 
@@ -16,10 +17,18 @@ export const projects: Project[] = [
       '/SocialDogs/postfeed.png',
       '/SocialDogs/login.png',
     ],
-    tags: ['CSSModules', 'JWT', 'CSSModules', 'JWT'],
-    area: ['FrontEnd', 'Design'],
+    tags: [
+      'CSSModules',
+      'JWT',
+      'Javascript',
+      'Typescript',
+      'Next.js',
+      'ReactJS',
+    ],
+    area: ['FrontEnd'],
     technologies: [
       {name: 'Next.js', icon: NextIcon},
+      {name: 'CSS Modules', icon: JSIcon},
       {name: 'javascript', icon: JSIcon},
     ],
     view: [
@@ -30,77 +39,101 @@ export const projects: Project[] = [
       },
       {
         type: 'github' as const,
-        link: 'https://github.com/brit0dev/socialdogsnext',
+        link: 'https://github.com/brit0dev/social-dogs',
         icon: GithubIcon,
       },
     ],
   },
   {
     title: 'Alura Crypto',
-    description: 'Description for project 2.',
+    description: 'The first challenge of Oracle ONE.',
     images: ['/AluraCrypto/project.png'],
-    tags: ['TagA', 'TagB'],
+    tags: ['HTML', 'Javascript', 'CSS3', 'OracleOne', 'Alura'],
     area: ['FrontEnd'],
-    technologies: [{name: 'React', icon: JSIcon}],
+    technologies: [
+      {name: 'HTML', icon: JSIcon},
+      {name: 'CSS3', icon: JSIcon},
+      {name: 'Javascript', icon: JSIcon},
+    ],
     view: [
-      {type: 'demo' as const, link: 'https://example.com/demo2', icon: ExternalLinkIcon},
+      {
+        type: 'demo' as const,
+        link: 'https://brit0dev.github.io/challenge-alura-oracle-one-01/',
+        icon: ExternalLinkIcon,
+      },
       {
         type: 'github' as const,
-        link: 'https://github.com/user/project2',
+        link: 'https://github.com/brit0dev/challenge-alura-oracle-one-01',
         icon: GithubIcon,
       },
     ],
   },
   {
-    title: 'Project 3',
-    description: 'Description for project 3.',
+    title: 'Github Explorer',
+    description: 'A frontend for github issues.',
     images: [
-      'https://picsum.photos/seed/project3-1/400/300',
-      'https://picsum.photos/seed/project3-2/400/300',
-      'https://picsum.photos/seed/project3-3/400/300',
+      '/GithubPages/dashboard.png',
+      '/GithubPages/search.png',
+      '/GithubPages/repository.png',
     ],
-    tags: ['TagC', 'TagD'],
-    area: ['BackEnd'],
-    technologies: [{name: 'Node.js', icon: JSIcon}],
+    tags: [
+      'Typescript',
+      'React',
+      'StyledComponents',
+      'GithubAPI',
+      'GoStackBootcamp',
+    ],
+    area: ['Design', 'FrontEnd'],
+    technologies: [
+      {name: 'Typescript', icon: JSIcon},
+      {name: 'Styled Components', icon: JSIcon},
+      {name: 'React', icon: ReactIcon},
+    ],
+
     view: [
       {
         type: 'github' as const,
-        link: 'https://github.com/user/project3',
+        link: 'https://github.com/brit0dev/githubpages',
         icon: GithubIcon,
       },
     ],
   },
   {
-    title: 'Project 4',
-    description: 'Description for project 4.',
+    title: 'Fintech Dashboard',
+    description: 'A dashboard to monitor sells of a fintech product.',
     images: [
-      'https://picsum.photos/seed/project4-1/400/300',
-      'https://picsum.photos/seed/project4-2/400/300',
-      'https://picsum.photos/seed/project4-3/400/300',
+      '/FintechReact/sells.png',
+      '/FintechReact/home.png',
+      '/FintechReact/logo.png',
     ],
-    tags: ['TagE', 'TagF'],
+    tags: ['React', 'Typescript', 'CSSModules', 'APIConsume'],
     area: ['FullStack'],
     technologies: [
-      {name: 'React', icon: JSIcon},
-      {name: 'Node.js', icon: JSIcon},
+      {name: 'React', icon: ReactIcon},
+      {name: 'Typescript', icon: JSIcon},
+      {name: 'CSSModules', icon: JSIcon},
     ],
     view: [
-      {type: 'demo' as const, link: 'https://example.com/demo4', icon: ExternalLinkIcon},
+      {
+        type: 'github' as const,
+        link: 'https://github.com/brit0dev/fintech-front-end_react',
+        icon: GithubIcon,
+      },
     ],
   },
   {
-    title: 'Project 5',
+    title: 'LinkedIn Cover v1.0',
     description: 'Description for project 5.',
-    images: [
-      'https://picsum.photos/seed/project5-1/400/300',
-      'https://picsum.photos/seed/project5-2/400/300',
-      'https://picsum.photos/seed/project5-3/400/300',
-    ],
-    tags: ['TagG', 'TagH'],
+    images: ['LinkedInCoverV1/cover.png'],
+    tags: ['Figma', 'Cover', 'Banner', 'LinkedIn', 'Braun'],
     area: ['Design'],
     technologies: [{name: 'Figma', icon: JSIcon}],
     view: [
-      {type: 'figma' as const, link: 'https://figma.com/file/project5', icon: FigmaIcon},
+      {
+        type: 'figma' as const,
+        link: 'https://figma.com/file/project5',
+        icon: FigmaIcon,
+      },
     ],
   },
   {
@@ -112,13 +145,17 @@ export const projects: Project[] = [
       'https://picsum.photos/seed/project6-3/400/300',
     ],
     tags: ['TagI', 'TagJ'],
-    area: ['FrontEnd', 'Design'],
+    area: ['Design'],
     technologies: [
       {name: 'Vue.js', icon: JSIcon},
       {name: 'Sass', icon: JSIcon},
     ],
     view: [
-      {type: 'demo' as const, link: 'https://example.com/demo6', icon: ExternalLinkIcon},
+      {
+        type: 'demo' as const,
+        link: 'https://example.com/demo6',
+        icon: ExternalLinkIcon,
+      },
       {
         type: 'github' as const,
         link: 'https://github.com/user/project6',
@@ -160,45 +197,15 @@ export const projects: Project[] = [
       {name: 'Firebase', icon: JSIcon},
     ],
     view: [
-      {type: 'demo' as const, link: 'https://example.com/demo8', icon: ExternalLinkIcon},
+      {
+        type: 'demo' as const,
+        link: 'https://example.com/demo8',
+        icon: ExternalLinkIcon,
+      },
       {
         type: 'github' as const,
         link: 'https://github.com/user/project8',
         icon: GithubIcon,
-      },
-    ],
-  },
-  {
-    title: 'Project 9',
-    description: 'Description for project 9.',
-    images: [
-      'https://picsum.photos/seed/project9-1/400/300',
-      'https://picsum.photos/seed/project9-2/400/300',
-      'https://picsum.photos/seed/project9-3/400/300',
-    ],
-    tags: ['TagO', 'TagP'],
-    area: ['FrontEnd'],
-    technologies: [{name: 'Svelte', icon: JSIcon}],
-    view: [
-      {type: 'demo' as const, link: 'https://example.com/demo9', icon: ExternalLinkIcon},
-    ],
-  },
-  {
-    title: 'Project 10',
-    description: 'Description for project 10.',
-    images: [
-      'https://picsum.photos/seed/project10-1/400/300',
-      'https://picsum.photos/seed/project10-2/400/300',
-      'https://picsum.photos/seed/project10-3/400/300',
-    ],
-    tags: ['TagQ', 'TagR'],
-    area: ['Design'],
-    technologies: [{name: 'Adobe XD', icon: JSIcon}],
-    view: [
-      {
-        type: 'figma' as const,
-        link: 'https://figma.com/file/project10',
-        icon: FigmaIcon,
       },
     ],
   },
