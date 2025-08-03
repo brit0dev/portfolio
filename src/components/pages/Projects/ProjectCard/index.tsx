@@ -47,10 +47,19 @@ const ProjectCard = ({
 
       <div className="relative flex h-0.75 bg-secondary">
         <div className="absolute flex h-11 bg-background-light gap-1 py-0.5 px-1 -top-6 right-1.5 drop-shadow-md rounded-lg">
-          {technologies.map((item) => {
-            const Icon = item.icon;
-            return <Icon key={title + '-technology:' + item.name} width={36} />;
-          })}
+          {technologies
+            .sort((a, b) => b.name.localeCompare(a.name))
+            .map((item) => {
+              const Icon = item.icon;
+              return (
+                <span
+                  key={title + '-technology:' + item.name}
+                  title={item.name}
+                >
+                  <Icon width={36} />
+                </span>
+              );
+            })}
         </div>
       </div>
 
