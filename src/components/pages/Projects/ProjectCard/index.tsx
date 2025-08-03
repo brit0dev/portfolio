@@ -60,7 +60,9 @@ const ProjectCard = ({
             <span className="p-0.75 h-5 bg-primary rounded-2xl"></span>
             <h4 className="font-semibold text-xl text-text-primary">{title}</h4>
           </div>
-          <p className="font-medium text-text-secondary">{description}</p>
+          <p className="font-medium text-text-secondary truncate">
+            {description}
+          </p>
         </div>
         <div className="flex justify-between items-end">
           <div className="relative flex flex-1 flex-nowrap overflow-hidden gap-1.25 p-0.75">

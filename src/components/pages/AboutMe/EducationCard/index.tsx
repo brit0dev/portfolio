@@ -36,9 +36,9 @@ const EducationCard = ({
     <div className="bg-primary pl-1 rounded-lg border-primary-dark min-w-50 border-1 shadow-sm">
       <div className="flex flex-col gap-1.25 text-nowrap place-items-center xs:items-start bg-background-light p-2.5 rounded-lg">
         <div className="flex flex-1 w-full justify-between items-center">
-          <div className="flex gap-1.5 items-center">
+          <div className="max-w-[70%] flex gap-1.5 items-center">
             <span className="p-0.75 h-4 bg-primary rounded-2xl"></span>
-            <h4 className="font-semibold text-lg text-text-primary">
+            <h4 className="font-semibold text-lg text-text-primary truncate">
               {education}
             </h4>
           </div>

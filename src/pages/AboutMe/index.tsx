@@ -30,7 +30,7 @@ const AboutMe = forwardRef<HTMLElement, SectionProps>(({isScrolled}, ref) => {
       >
         Sobre mim
       </SectionHeader>
-      <div className="md:max-w-220 lg:max-w-285 xl:max-w-full m-auto grid grid-cols-1 lg:grid-cols-[minmax(33rem,37%)_1fr] md:grid-rows-[repeat(3,auto)] items-start pt-4 xs:pt-6 pb-3 px-1 xs:px-3 2xl:px-6 max-xl:gap-y-5 gap-0.5 2xl:gap-x-2.5">
+      <div className="md:max-w-220 lg:max-w-285 xl:max-w-full m-auto grid grid-cols-1 xl:grid-cols-[minmax(33rem,37%)_1fr] md:grid-rows-[repeat(3,auto)] items-start pt-4 xs:pt-6 pb-3 px-1 xs:px-3 2xl:px-6 max-xl:gap-y-5 gap-0.5 2xl:gap-x-2.5">
         <div
           id="bio-container"
           className="flex w-full justify-center px-1 xs:px-2.5 lg:px-4 xl:row-span-2"

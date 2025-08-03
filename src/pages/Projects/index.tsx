@@ -9,7 +9,10 @@ const Projects = ({isScrolled}: SectionProps) => {
   const isMobile = useIsMobile();
 
   return (
-    <section id="projects" className={`${!isMobile && 'snap-start'} h-full `}>
+    <section
+      id="projects"
+      className={`${!isMobile && 'snap-start'} min-h-[100vh]`}
+    >
       <SectionHeader
         isSticky
         isOnPage={isScrolled}
