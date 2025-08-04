@@ -1,10 +1,15 @@
 import {
   JSIcon,
-  NextIcon,
   GithubIcon,
   FigmaIcon,
   ExternalLinkIcon,
   ReactIcon,
+  TSIcon,
+  CSSModulesIcon,
+  HTML5Icon,
+  CSS3Icon,
+  StyledComponentsIcon,
+  FigmaTechIcon,
 } from '@/components/common/icons';
 import type {Project} from '@/types/pages/projects';
 
@@ -27,9 +32,9 @@ export const projects: Project[] = [
     ],
     area: ['FrontEnd'],
     technologies: [
-      {name: 'Next.js', icon: NextIcon},
-      {name: 'CSS Modules', icon: JSIcon},
-      {name: 'javascript', icon: JSIcon},
+      {name: 'React', icon: ReactIcon},
+      {name: 'CSS Modules', icon: CSSModulesIcon},
+      {name: 'Javascript', icon: JSIcon},
     ],
     view: [
       {
@@ -51,8 +56,8 @@ export const projects: Project[] = [
     tags: ['HTML', 'Javascript', 'CSS3', 'OracleOne', 'Alura'],
     area: ['FrontEnd'],
     technologies: [
-      {name: 'HTML', icon: JSIcon},
-      {name: 'CSS3', icon: JSIcon},
+      {name: 'HTML5', icon: HTML5Icon},
+      {name: 'CSS3', icon: CSS3Icon},
       {name: 'Javascript', icon: JSIcon},
     ],
     view: [
@@ -86,7 +91,7 @@ export const projects: Project[] = [
     area: ['Design', 'FrontEnd'],
     technologies: [
       {name: 'Typescript', icon: JSIcon},
-      {name: 'Styled Components', icon: JSIcon},
+      {name: 'Styled Components', icon: StyledComponentsIcon},
       {name: 'React', icon: ReactIcon},
     ],
 
@@ -110,8 +115,8 @@ export const projects: Project[] = [
     area: ['FullStack'],
     technologies: [
       {name: 'React', icon: ReactIcon},
-      {name: 'Typescript', icon: JSIcon},
-      {name: 'CSSModules', icon: JSIcon},
+      {name: 'Typescript', icon: TSIcon},
+      {name: 'CSS Modules', icon: CSSModulesIcon},
     ],
     view: [
       {
@@ -123,11 +128,11 @@ export const projects: Project[] = [
   },
   {
     title: 'LinkedIn Cover v1.0',
-    description: 'Description for project 5.',
+    description: 'First linkedin cover. Inspired by Braun Design.',
     images: ['LinkedInCoverV1/cover.png'],
     tags: ['Figma', 'Cover', 'Banner', 'LinkedIn', 'Braun'],
     area: ['Design'],
-    technologies: [{name: 'Figma', icon: JSIcon}],
+    technologies: [{name: 'Figma', icon: FigmaTechIcon}],
     view: [
       {
         type: 'figma' as const,

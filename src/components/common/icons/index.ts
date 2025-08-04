@@ -7,8 +7,13 @@ export * from './links/EmailIcon';
 export * from './links/LocationIcon';
 export * from './links/PhoneIcon';
 export * from './technologies/JSIcon';
+export * from './technologies/TSIcon';
+export * from './technologies/CSSModulesIcon';
+export * from './technologies/HTML5Icon';
+export * from './technologies/CSS3Icon';
+export * from './technologies/StyledComponentsIcon';
+export * from './technologies/FigmaTechIcon';
 export * from './technologies/NextIcon';
 export * from './technologies/ReactIcon';
 export * from './ui/HandIcon';
 export * from './ui/CodeIcon';
-

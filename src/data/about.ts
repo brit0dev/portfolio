@@ -15,7 +15,7 @@ export const educationCards: Education[] = [
     status: 'In progress',
   },
   {
-    education: 'Oracle One Trilha backend',
+    education: 'Oracle ONE - Backend',
     acronym: 'Oracle',
     fullName: 'By Oracle in Alura platform',
     courseType: 'Education Program',
