@@ -35,13 +35,11 @@ const EducationCard = ({
   return (
     <div className="bg-primary pl-1 rounded-lg border-primary-dark min-w-50 border-1 shadow-sm">
       <div className="flex flex-col gap-1.25 text-nowrap place-items-center xs:items-start bg-background-light p-2.5 rounded-lg">
-        <div className="flex flex-1 w-full justify-between items-center">
-          <div className="max-w-[70%] flex gap-1.5 items-center">
-            <span className="p-0.75 h-4 bg-primary rounded-2xl"></span>
-            <h4 className="font-semibold text-lg text-text-primary truncate">
-              {education}
-            </h4>
-          </div>
+        <div className="grid grid-cols-[auto_1fr_auto] items-center gap-x-1.5 grid-flow-col w-full">
+          <span className="p-0.75 h-4.5 bg-primary rounded-2xl"></span>
+          <h4 className="font-semibold text-lg text-text-primary truncate">
+            {education}
+          </h4>
           <span
             className={`border-1 text-[0.8rem] rounded-md px-1.75 py-0.25 ${currentStatusStyle.base} ${currentStatusStyle.text} ${currentStatusStyle.border}`}
           >
@@ -55,8 +53,8 @@ const EducationCard = ({
             </span>
             <span className="truncate w-full">{fullName}</span>
           </p>
-          <div className="flex items-center py-[1px] pr-[1px] text-[#764A19] bg-primary border-primary-dark border-1 border-l-3 rounded-md text-sm">
-            <span className="px-2.5 py-0">{courseType}</span>
+          <div className="flex items-center py-[1px] pr-[1px] text-[#764A19] bg-primary border-primary-dark border-1 border-l-3 rounded-md text-sm max-w-full">
+            <span className="px-2.5 py-0 truncate">{courseType}</span>
             <span className="bg-background-light py-0.5 px-1.5 rounded-md">
               {initialYear === finalYear
                 ? initialYear
