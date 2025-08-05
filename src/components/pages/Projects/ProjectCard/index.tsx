@@ -1,18 +1,18 @@
 import React from 'react';
 import type {Project} from '@/types/pages/projects';
 
-const ProjectCard = ({
-  title,
-  description,
-  images,
-  area,
-  technologies,
-  tags,
-  view,
-}: Project) => {
+type ProjectCardProps = Project & {
+  onCardClick: (project: Project) => void;
+};
+
+const ProjectCard = (props: ProjectCardProps) => {
+  const {title, description, images, area, technologies, tags, view} = props;
   return (
     <div className="flex flex-col border-primary-dark min-w-50 border-1 shadow-sm bg-background-light rounded-[0.625rem] overflow-hidden">
-      <div className="relative  grid grid-cols-2 grid-rows-2 bg-background-light gap-0.5 h-53 xs:h-60">
+      <div
+        className="relative grid grid-cols-2 grid-rows-2 bg-background-light gap-0.5 h-53 xs:h-60 cursor-pointer"
+        onClick={() => props.onCardClick(props)}
+      >
         {images.length > 2 ? (
           images
             .slice(0, 3)
@@ -49,7 +49,7 @@ const ProjectCard = ({
         <div className="absolute flex h-11 bg-background-light gap-1 py-0.5 px-1 -top-6 right-1.5 drop-shadow-md rounded-lg">
           {technologies
             .sort((a, b) => b.name.localeCompare(a.name))
-            .map((item) => {
+            .map(item => {
               const Icon = item.icon;
               return (
                 <span

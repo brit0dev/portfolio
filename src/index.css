@@ -71,6 +71,23 @@
       var(--color-secondary-darker) 45%
     );
   }
+  /* Carousel Utilities */
+  .scroll-snap-x-mandatory {
+    scroll-snap-type: x mandatory;
+  }
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+  .snap-center {
+    scroll-snap-align: center;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
 }
 
 :root {
