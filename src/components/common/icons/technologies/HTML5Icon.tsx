@@ -9,7 +9,7 @@ export const HTML5Icon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <rect width="40" height="40" rx="5" fill="black" />
+    <rect width="40" height="40" fill="black" />
     <path
       d="M12.5 16.1L12.8 18.8H15.8371H20H24.2H27.284L27.5 16.1H20H12.5Z"
       fill="black"

@@ -11,7 +11,7 @@ export const FigmaTechIcon: React.FC<React.SVGProps<SVGSVGElement>> = (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <rect width="40" height="40" rx="5" fill="black" />
+    <rect width="40" height="40" fill="black" />
     <path
       fill-rule="evenodd"
       clip-rule="evenodd"

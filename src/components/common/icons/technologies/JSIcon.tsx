@@ -2,7 +2,7 @@ import React from 'react';
 
 export const JSIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg width="40" height="40" {...props} viewBox="0 0 40 40" fill="none">
-    <rect width="40" height="40" rx="7.5" fill="black" />
+    <rect width="40" height="40" fill="black" />
     <path
       d="M20.7064 18.3776H16.8483V30.8776C16.8483 30.8776 16.9728 32.9805 15.0645 33.1362C13.1563 33.292 12.2436 31.2281 12.2436 31.2281L9.09082 33.0194C9.09082 33.0194 10.7502 36.7188 15.3964 36.3294C21.0382 35.8565 20.7064 31.1113 20.7064 31.1113V18.3776Z"
       fill="white"

@@ -70,42 +70,35 @@ const ProjectModal = ({project, onClose}: ProjectModalProps) => {
 
   return (
     <div
-      className={`fixed inset-0 z-50 flex items-center justify-center bg-black transition-opacity duration-300 ${
+      className={`fixed inset-0 z-50 flex items-center justify-center bg-background-light/70 backdrop-blur-md transition-opacity duration-300 ${
         isAnimating ? 'bg-opacity-50' : 'bg-opacity-0'
       }`}
       onClick={handleClose}
     >
       <div
-        className={`bg-background-light rounded-lg shadow-xl w-11/12 max-w-6xl max-h-[90vh] overflow-y-auto p-6 transform transition-all duration-300 ease-in-out ${
+        className={`relative grid grid-cols-1 bg-background rounded-lg shadow-[0px_0px_20px_1px] shadow-gray-500/30 border-primary border-1 w-11/12 max-w-5xl max-h-[90vh] overflow-y-auto pt-1.5 pb-0 transform transition-all duration-300 ease-in-out ${
           isAnimating ? 'scale-100 opacity-100' : 'scale-95 opacity-0'
         }`}
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex justify-between items-start">
-          <h2 className="text-3xl font-bold text-text-primary">
-            {project.title}
-          </h2>
-          <button
-            onClick={handleClose}
-            className="text-text-secondary hover:text-text-primary text-3xl"
-          >
-            &times;
-          </button>
-        </div>
-        <p className="text-text-secondary mt-2">{project.description}</p>
-
+        <button
+          onClick={handleClose}
+          className="absolute z-10 right-2 top-2 bg-background-light shadow-md rounded-full w-7 h-7 overflow-hidden text-text-secondary hover:text-text-primary text-3xl leading-none"
+        >
+          <div className="-translate-y-[0.16rem]">&times;</div>
+        </button>
         {/* --- Image Carousel Start --- */}
-        <div className="group select-none relative mt-4">
+        <div className="group select-none relative">
           <div
             ref={scrollContainerRef}
-            className="flex overflow-x-auto gap-4 scroll-snap-x-mandatory scroll-smooth hide-scrollbar"
+            className="flex overflow-x-auto gap-1 scroll-snap-x-mandatory scroll-smooth hide-scrollbar"
           >
             {project.images.map((image, index) => (
               <img
                 key={index}
                 src={image}
                 alt={`${project.title} screenshot ${index + 1}`}
-                className={`max-h-96 flex-shrink-0 rounded-md object-cover snap-center transition-opacity duration-300 ${
+                className={`max-h-96 flex-shrink-0 first-of-type:rounded-l-none last-of-type:rounded-r-none rounded-md object-cover snap-center transition-opacity duration-300 ${
                   currentImageIndex !== index ? 'opacity-70' : 'opacity-100'
                 }`}
               />
@@ -152,41 +145,86 @@ const ProjectModal = ({project, onClose}: ProjectModalProps) => {
           )}
         </div>
         {/* --- Image Carousel End --- */}
-
-        <div className="mt-4">
-          <h3 className="text-xl font-semibold text-text-primary">
-            Technologies
-          </h3>
-          <div className="flex flex-wrap gap-2 mt-2">
-            {project.technologies.map(({name, icon: Icon}) => (
-              <span
-                key={name}
-                className="flex items-center gap-2 bg-primary text-text-label px-3 py-1 rounded-full"
-              >
-                <Icon width={20} />
-                {name}
+        <div className="grid grid-cols-2 grid-flow-col max-sm:row-start-1 pt-1.25 pb-2.25 items-start sm:mt-3 sm:pt-0 sm:pb-0 px-4">
+          <div className="flex gap-2 items-center">
+            <span className="p-0.75 h-6.75 bg-primary rounded-2xl"></span>
+            <h2 className="text-3xl font-bold text-text-primary">
+              {project.title}
+            </h2>
+          </div>
+          <div className="absolute bg-background-light right-2 p-1 shadow-sm rounded-xl">
+            <div className="flex flex-wrap gap-1">
+              <span className="flex items-center gap-2 bg-text-dark text-background px-3 py-1 font-medium rounded-lg">
+                Technologies:
               </span>
-            ))}
+
+              {project.technologies.map(({name, icon: Icon}) => (
+                <span
+                  key={name}
+                  className="flex items-center gap-2 bg-background text-text-dark sm:pl-1 sm:pr-3 rounded-lg"
+                >
+                  <Icon className="rounded-md w-7.5 h-7.5" />
+                  <span className="max-sm:hidden">{name}</span>
+                </span>
+              ))}
+            </div>
           </div>
         </div>
-        <div className="mt-4">
-          <h3 className="text-xl font-semibold text-text-primary">Links</h3>
-          <div className="flex gap-4 mt-2">
-            {project.view?.map(({type, link}) => {
-              const Icon = viewIcons[type];
-              return (
-                <a
-                  key={type}
-                  href={link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-blue-600 hover:underline"
-                >
-                  <Icon width={24} />
-                  <span className="capitalize">{type}</span>
-                </a>
-              );
-            })}
+        <p className="text-text-primary text-lg py-3 px-4">
+          {project.description}
+        </p>
+
+        <div className="mt-2 px-4 py-4 flex flex-wrap sm:flex-nowrap justify-between gap-y-1.5 gap-x-20 bg-primary/20 overflow-hidden">
+          <div className="flex items-center flex-nowrap gap-1 ">
+            <span className="flex items-center gap-2 bg-text-dark text-background px-3 py-1 font-medium rounded-lg">
+              Links:
+            </span>
+            <div className="flex gap-1 items-center">
+              {project.view?.map(({type, link}, index) => {
+                const Icon = viewIcons[type];
+                return (
+                  <a
+                    key={type}
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1 text-text-label hover:text-text-label/80 font-medium hover:underline"
+                  >
+                    <Icon width={24} />
+                    <span className="capitalize">{type}</span>
+                    {index < project.view.length - 1 && <span>|</span>}
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="flex sm:max-w-[60%] lg:max-w-[70%] justify-between gap-1 pr-1 items-center">
+            <span className="flex items-center gap-2 bg-accent text-text-secondary px-3 py-1 font-medium rounded-lg">
+              Tags:
+            </span>
+            <div className="flex flex-nowrap overflow-x-scroll gap-1.25 p-0.75">
+              {project.tags.map((tag, index) => (
+                <>
+                  <a
+                    key={index}
+                    href={`/projects?tag=${tag}`}
+                    className="flex gap-0.5 px-1.75 font-semibold text-primary py-0.5 border-primary border-1 rounded-md hover:text-[#E8A75C]"
+                  >
+                    <span className="text-[#E8A75C]">#</span>
+                    {tag}
+                  </a>
+                  <a
+                    key={index}
+                    href={`/projects?tag=${tag}`}
+                    className="flex gap-0.5 px-1.75 font-semibold text-primary py-0.5 border-primary border-1 rounded-md hover:text-[#E8A75C]"
+                  >
+                    <span className="text-[#E8A75C]">#</span>
+                    {tag}
+                  </a>
+                </>
+              ))}
+            </div>
           </div>
         </div>
       </div>
