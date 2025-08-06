@@ -70,7 +70,7 @@ const ProjectCard = (props: ProjectCardProps) => {
             <h4 className="font-semibold text-xl text-text-primary">{title}</h4>
           </div>
           <p className="font-medium text-text-secondary truncate">
-            {description}
+            {description[0]}
           </p>
         </div>
         <div className="flex justify-between items-end">

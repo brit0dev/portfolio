@@ -16,7 +16,7 @@ import type {Project} from '@/types/pages/projects';
 export const projects: Project[] = [
   {
     title: 'Social Dogs',
-    description: 'A social network for dogs.',
+    description: ['A social network for dogs.'],
     images: [
       '/SocialDogs/home.png',
       '/SocialDogs/postfeed.png',
@@ -51,7 +51,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Alura Crypto',
-    description: 'The first challenge of Oracle ONE.',
+    description: ['The first challenge of Oracle ONE.'],
     images: ['/AluraCrypto/project.png'],
     tags: ['HTML', 'Javascript', 'CSS3', 'OracleOne', 'Alura'],
     area: ['FrontEnd'],
@@ -75,7 +75,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Github Explorer',
-    description: 'A frontend for github issues.',
+    description: ['A frontend for github issues.'],
     images: [
       '/GithubPages/dashboard.png',
       '/GithubPages/search.png',
@@ -105,7 +105,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Fintech Dashboard',
-    description: 'A dashboard to monitor sells of a fintech product.',
+    description: ['A dashboard to monitor sells of a fintech product.'],
     images: [
       '/FintechReact/sells.png',
       '/FintechReact/home.png',
@@ -128,7 +128,7 @@ export const projects: Project[] = [
   },
   {
     title: 'LinkedIn Cover v1.0',
-    description: 'First linkedin cover. Inspired by Braun Design.',
+    description: ['First linkedin cover. Inspired by Braun Design.'],
     images: ['LinkedInCoverV1/cover.png'],
     tags: ['Figma', 'Cover', 'Banner', 'LinkedIn', 'Braun'],
     area: ['Design'],
@@ -143,7 +143,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Project 6',
-    description: 'Description for project 6.',
+    description: ['Description for project 6.'],
     images: [
       'https://picsum.photos/seed/project6-1/400/300',
       'https://picsum.photos/seed/project6-2/400/300',
@@ -170,7 +170,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Project 7',
-    description: 'Description for project 7.',
+    description: ['Description for project 7.'],
     images: [
       'https://picsum.photos/seed/project7-1/400/300',
       'https://picsum.photos/seed/project7-2/400/300',
@@ -189,7 +189,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Project 8',
-    description: 'Description for project 8.',
+    description: ['Description for project 8.'],
     images: [
       'https://picsum.photos/seed/project8-1/400/300',
       'https://picsum.photos/seed/project8-2/400/300',

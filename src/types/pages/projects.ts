@@ -2,7 +2,7 @@ import type {FC, SVGProps} from 'react';
 
 export type Project = {
   title: string;
-  description: string;
+  description: string[];
   images: string[];
   tags: string[];
   area: string[];

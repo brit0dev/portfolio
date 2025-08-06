@@ -171,7 +171,7 @@ const ProjectModal = ({project, onClose}: ProjectModalProps) => {
           </div>
         </div>
         <p className="text-text-primary text-lg py-3 px-4">
-          {project.description}
+          {project.description[0]}
         </p>
 
         <div className="mt-2 px-4 py-4 flex flex-wrap sm:flex-nowrap justify-between gap-y-1.5 gap-x-20 bg-primary/20 overflow-hidden">
