@@ -1,5 +1,5 @@
 import EducationCard from '@/components/pages/AboutMe/EducationCard';
-import {forwardRef} from 'react';
+import {forwardRef, useState} from 'react';
 
 import type {SectionProps} from '@/types/common';
 
@@ -12,11 +12,19 @@ import HandIcon from '@/components/common/icons/ui/HandIcon';
 import LocationIcon from '@/components/common/icons/links/LocationIcon';
 import PhoneIcon from '@/components/common/icons/links/PhoneIcon';
 import EmailIcon from '@/components/common/icons/links/EmailIcon';
+import EducationModal from '@/components/pages/AboutMe/EducationModal';
 
 import {useIsMobile} from '@/hooks/useIsMobile';
 
 const AboutMe = forwardRef<HTMLElement, SectionProps>(({isScrolled}, ref) => {
   const isMobile = useIsMobile();
+  const [isEducationModalOpen, setIsEducationModalOpen] = useState(false);
+
+  const handleOpenEducationModal = () => setIsEducationModalOpen(true);
+  const handleCloseEducationModal = () => setIsEducationModalOpen(false);
+
+  const displayedEducationCards = educationCards;
+
   return (
     <section
       ref={ref}
@@ -99,17 +107,20 @@ const AboutMe = forwardRef<HTMLElement, SectionProps>(({isScrolled}, ref) => {
             </div>
           </div>
         </div>
-        <div id="education-container" className="flex-col p-1">
+        <div id="education-container" className="relative flex-col p-1">
           <h3 className="font-bold text-2xl mb-2 font-instrument">
             <span className="text-orange-200">#</span> Escolaridade:
           </h3>
           <div className="relative max-h-58 overflow-hidden">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-4 gap-4 p-1 xs:p-2">
-              {educationCards.map((item, index) => (
+              {displayedEducationCards.map((item, index) => (
                 <EducationCard key={index} {...item} />
               ))}
             </div>
-            <button className="absolute bottom-2 right-0.25 z-10 flex items-center bg-button-text border-[1px] hover:border-button-text transition-all border-button-border shadow-md rounded-lg overflow-hidden text-white">
+            <button
+              onClick={handleOpenEducationModal}
+              className="absolute bottom-2 right-0.25 z-10 flex items-center bg-button-text border-[1px] hover:border-button-text transition-all border-button-border shadow-md rounded-lg overflow-hidden text-white"
+            >
               <span className="bg-button py-0.5 px-2.5 rounded-md font-semibold text-button-text hover:text-text-primary hover:transition">
                 Exibir Mais
               </span>
@@ -132,6 +143,12 @@ const AboutMe = forwardRef<HTMLElement, SectionProps>(({isScrolled}, ref) => {
           </div>
         </div>
       </div>
+      {isEducationModalOpen && (
+        <EducationModal
+          educationList={educationCards}
+          onClose={handleCloseEducationModal}
+        />
+      )}
     </section>
   );
 });
