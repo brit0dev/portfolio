@@ -16,11 +16,19 @@ import type {Project} from '@/types/pages/projects';
 export const projects: Project[] = [
   {
     title: 'Social Dogs',
-    description: ['A social network for dogs.'],
+    description: [
+      'A social network for dogs.',
+      'This project was created during the ReactJS course by Origamid, with the goal of building a photo-sharing platform inspired by Instagram — but entirely focused on dogs.',
+      'I built key features like secure login using JWT authentication, a live feed of recent dog photos, modal-based post viewing with comments, and full post pages including image, description, and feedback. I also added a user dashboard for managing personal posts and checking individual post statistics.',
+      'The project helped me solidify many essential React concepts, including Hooks like useState, useEffect, and useReducer, the use of custom hooks, form handling, navigation with React Router, and shared state with the Context API. I also worked with CSS Modules for scoped styling and PropTypes for type checking, all within a functional component structure.',
+      'All the backend data came from an API provided by Origamid. A live demo is linked in the project section.',
+    ],
     images: [
       '/SocialDogs/home.png',
       '/SocialDogs/postfeed.png',
       '/SocialDogs/login.png',
+      '/SocialDogs/myaccount.png',
+      '/SocialDogs/statistics.png',
     ],
     tags: [
       'CSSModules',
