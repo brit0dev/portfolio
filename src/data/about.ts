@@ -8,7 +8,8 @@ export const educationCards: Education[] = [
   {
     education: 'Estatística',
     acronym: 'UFPE',
-    fullName: 'Universidade Federal de Pernambuco',
+    fullName:
+      'Curso Estatística na Universidade Federal de Pernambuco (UFPE), uma formação que me proporciona uma base sólida em análise de dados, modelagem estatística e programação aplicada à solução de problemas reais. Desde o início do curso, venho desenvolvendo habilidades essenciais para atuar na área de Ciência de Dados, combinando conhecimentos de probabilidade, inferência estatística e técnicas computacionais.',
     courseType: 'Graduação',
     initialYear: 2024,
     finalYear: 2028,

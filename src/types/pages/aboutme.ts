@@ -12,3 +12,8 @@ export type Education = {
   finalYear: number;
   status: EducationStatus;
 };
+
+export type EducationCardProps = {
+  data: Education;
+  expand?: boolean;
+};

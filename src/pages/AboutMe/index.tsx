@@ -23,8 +23,6 @@ const AboutMe = forwardRef<HTMLElement, SectionProps>(({isScrolled}, ref) => {
   const handleOpenEducationModal = () => setIsEducationModalOpen(true);
   const handleCloseEducationModal = () => setIsEducationModalOpen(false);
 
-  const displayedEducationCards = educationCards;
-
   return (
     <section
       ref={ref}
@@ -113,8 +111,8 @@ const AboutMe = forwardRef<HTMLElement, SectionProps>(({isScrolled}, ref) => {
           </h3>
           <div className="relative max-h-58 overflow-hidden">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-4 gap-4 p-1 xs:p-2">
-              {displayedEducationCards.map((item, index) => (
-                <EducationCard key={index} {...item} />
+              {educationCards.map((item, index) => (
+                <EducationCard key={index} data={item} expand={false} />
               ))}
             </div>
             <button

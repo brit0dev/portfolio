@@ -1,14 +1,16 @@
-import type {Education, EducationStatus} from '@/types/pages/aboutme';
+import type {EducationCardProps, EducationStatus} from '@/types/pages/aboutme';
 
-const EducationCard = ({
-  education,
-  acronym,
-  fullName,
-  courseType,
-  initialYear,
-  finalYear,
-  status,
-}: Education) => {
+const EducationCard = ({data, expand}: EducationCardProps) => {
+  const {
+    education,
+    acronym,
+    fullName,
+    courseType,
+    initialYear,
+    finalYear,
+    status,
+  } = data;
+
   const statusStyles: Record<
     EducationStatus,
     {base: string; text: string; border: string}
@@ -33,7 +35,9 @@ const EducationCard = ({
   const currentStatusStyle = statusStyles[status];
 
   return (
-    <div className="bg-primary pl-1 rounded-lg border-primary-dark min-w-50 border-1 shadow-sm">
+    <div
+      className={`bg-primary pl-1 rounded-lg border-primary-dark min-w-50 border-1 shadow-sm ${expand && ' max-w-xs'}`}
+    >
       <div className="flex flex-col gap-1.25 text-nowrap place-items-center xs:items-start bg-background-light p-2.5 rounded-lg">
         <div className="grid grid-cols-[auto_1fr_auto] items-center gap-x-1.5 grid-flow-col w-full">
           <span className="p-0.75 h-4.5 bg-primary rounded-2xl"></span>
@@ -47,13 +51,10 @@ const EducationCard = ({
           </span>
         </div>
         <div className="flex w-full flex-col gap-1 items-start">
-          <p className="flex w-full gap-1 text-text-secondary overflow-hidden">
+          <div className="flex items-center py-[1px] pr-[1px] text-[#764A19] bg-primary border-primary-dark border-1 border-l-3 rounded-md text-sm max-w-full">
             <span className="font-medium text-primary-dark px-1 py 0.5 border-primary border-1 rounded-md">
               {acronym}
             </span>
-            <span className="truncate w-full">{fullName}</span>
-          </p>
-          <div className="flex items-center py-[1px] pr-[1px] text-[#764A19] bg-primary border-primary-dark border-1 border-l-3 rounded-md text-sm max-w-full">
             <span className="px-2.5 py-0 truncate">{courseType}</span>
             <span className="bg-background-light py-0.5 px-1.5 rounded-md">
               {initialYear === finalYear
@@ -61,6 +62,15 @@ const EducationCard = ({
                 : `${initialYear} - ${finalYear}`}
             </span>
           </div>
+          <p
+            className={`flex flex-wrap w-full gap-1 text-text-secondary ${expand ? '' : 'overflow-hidden'}  break-words whitespace-normal`}
+          >
+            <span
+              className={`${expand ? 'break-words whitespace-normal' : 'truncate'} w-full `}
+            >
+              {fullName}
+            </span>
+          </p>
         </div>
       </div>
     </div>

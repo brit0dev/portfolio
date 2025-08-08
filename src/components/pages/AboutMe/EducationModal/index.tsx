@@ -55,9 +55,9 @@ const EducationModal = ({educationList, onClose}: EducationModalProps) => {
         </div>
 
         <div className="overflow-y-auto p-6">
-          <div className="grid grid-flow-row-dense grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4">
+          <div className="flex flex-col flex-wrap gap-4">
             {educationList.map((education, index) => (
-              <EducationCard key={index} {...education} />
+              <EducationCard key={index} data={education} expand={true} />
             ))}
           </div>
         </div>
