@@ -47,7 +47,7 @@ const ProjectCard = (props: ProjectCardProps) => {
       </div>
 
       <div className="relative flex h-0.75 bg-secondary">
-        <div className="absolute -top-6 right-1.5 flex h-11 bg-background-light gap-1 py-0.5 px-1  drop-shadow-md rounded-lg">
+        <div className="absolute -top-6 right-1.5 flex items-center h-11 bg-background-light gap-1 py-0.5 px-1 drop-shadow-md rounded-lg">
           {technologies
             .sort((a, b) => b.name.localeCompare(a.name))
             .map((item) => {
@@ -56,8 +56,9 @@ const ProjectCard = (props: ProjectCardProps) => {
                 <span
                   key={title + '-technology:' + item.name}
                   title={item.name}
+                  className="w-9 h-9"
                 >
-                  <Icon width={36} />
+                  <Icon className="rounded-md w-9 h-9" />
                 </span>
               );
             })}
