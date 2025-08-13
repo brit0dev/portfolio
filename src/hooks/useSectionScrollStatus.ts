@@ -29,7 +29,10 @@ export const useSectionScrollStatus = ({
         setProjectsScroll(false);
     };
 
+    onScroll();
+
     window.addEventListener('scroll', onScroll);
+
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
