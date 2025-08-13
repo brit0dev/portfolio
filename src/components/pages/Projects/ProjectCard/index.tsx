@@ -1,5 +1,6 @@
 import React from 'react';
 import type {Project} from '@/types/pages/projects';
+import TagList from '@/components/common/TagList';
 
 type ProjectCardProps = Project & {
   onCardClick: (project: Project) => void;
@@ -46,10 +47,10 @@ const ProjectCard = (props: ProjectCardProps) => {
       </div>
 
       <div className="relative flex h-0.75 bg-secondary">
-        <div className="absolute flex h-11 bg-background-light gap-1 py-0.5 px-1 -top-6 right-1.5 drop-shadow-md rounded-lg">
+        <div className="absolute -top-6 right-1.5 flex h-11 bg-background-light gap-1 py-0.5 px-1  drop-shadow-md rounded-lg">
           {technologies
             .sort((a, b) => b.name.localeCompare(a.name))
-            .map(item => {
+            .map((item) => {
               const Icon = item.icon;
               return (
                 <span
@@ -74,20 +75,7 @@ const ProjectCard = (props: ProjectCardProps) => {
           </p>
         </div>
         <div className="flex justify-between items-end">
-          <div className="relative flex flex-1 flex-nowrap overflow-hidden gap-1.25 p-0.75">
-            {tags.map((tag, index) => (
-              <a
-                key={index}
-                href={`/projects?tag=${tag}`}
-                className="flex gap-0.5 px-1.75 font-semibold text-primary py-0.5 border-primary border-1 rounded-md hover:text-[#E8A75C]"
-              >
-                <span className="text-[#E8A75C]">#</span>
-                {tag}
-              </a>
-            ))}
-            <div className="absolute bottom-0 right-0 h-24 w-10 bg-gradient-to-l from-background to-transparent"></div>
-          </div>
-
+          <TagList list={tags} />
           {view && (
             <div className="relative">
               <div className="z-0 relative flex items-center bg-secondary-darker border-1 border-b-0 border-r-0 border-primary-dark text-white px-2.75 p-1 rounded-tl-lg space-x-2">
@@ -100,7 +88,7 @@ const ProjectCard = (props: ProjectCardProps) => {
                         target="_blank"
                         rel="noopener noreferrer"
                         title={item.type}
-                        className="flex gap-1.25 items-center  font-medium text-background hover:opacity-60 transition-all capitalize"
+                        className="flex gap-1.25 items-center font-medium text-background hover:opacity-60 transition-all capitalize"
                       >
                         <Icon width={18} height={18} />
                         {item.type}

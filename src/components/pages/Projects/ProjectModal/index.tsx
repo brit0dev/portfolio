@@ -5,6 +5,7 @@ import {
   FigmaIcon,
   GithubIcon,
 } from '@/components/common/icons';
+import TagList from '@/components/common/TagList';
 
 type ProjectModalProps = {
   project: Project;
@@ -157,7 +158,7 @@ const ProjectModal = ({project, onClose}: ProjectModalProps) => {
             )}
           </div>
           {/* --- Image Carousel End --- */}
-          <div className="grid grid-cols-2 grid-flow-col max-sm:bg-secondary py-0.5 items-start sm:mt-3 sm:pt-0 sm:pb-0 px-4">
+          <div className="grid grid-cols-[auto_1fr] justify-items-end grid-flow-col max-sm:bg-secondary py-0.5 items-center sm:mt-3 sm:pt-0 sm:pb-0 px-4">
             <div className="flex flex-col gap-0.5 max-sm:hidden">
               <div className="flex gap-2 items-center">
                 <span className="p-0.75 h-6.75 bg-primary rounded-2xl"></span>
@@ -169,7 +170,7 @@ const ProjectModal = ({project, onClose}: ProjectModalProps) => {
                 {project.description[0]}
               </p>
             </div>
-            <div className="absolute -translate-y-5.5 bg-background-light right-2 p-1 shadow-sm rounded-xl">
+            <div className="max-sm:absolute max-sm:-translate-y-5.5 bg-background-light right-2 p-1 shadow-sm rounded-xl">
               <div className="flex flex-wrap max-lg:gap-0.75 gap-0.25">
                 <span className="max-sm:hidden flex items-center bg-text-dark text-background px-3 py-1 font-medium rounded-lg">
                   Technologies:
@@ -225,20 +226,7 @@ const ProjectModal = ({project, onClose}: ProjectModalProps) => {
             <span className="flex items-center gap-2 bg-accent text-text-secondary px-3 py-1 font-medium rounded-lg">
               Tags:
             </span>
-            <div className="flex flex-nowrap overflow-x-scroll gap-1.25 p-0.75">
-              {project.tags.map((tag, index) => (
-                <>
-                  <a
-                    key={index}
-                    href={`/projects?tag=${tag}`}
-                    className="flex gap-0.5 px-1.75 font-semibold text-primary py-0.5 border-primary border-1 rounded-md hover:text-[#E8A75C]"
-                  >
-                    <span className="text-[#E8A75C]">#</span>
-                    {tag}
-                  </a>
-                </>
-              ))}
-            </div>
+            <TagList list={project.tags} />
           </div>
         </div>
       </div>

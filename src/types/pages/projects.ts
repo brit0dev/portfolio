@@ -1,10 +1,11 @@
 import type {FC, SVGProps} from 'react';
+import type {Tags} from '../common';
 
 export type Project = {
   title: string;
   description: string[];
   images: string[];
-  tags: string[];
+  tags: Tags;
   area: string[];
   technologies: {
     name: string;

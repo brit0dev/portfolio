@@ -31,12 +31,12 @@ export const projects: Project[] = [
       '/SocialDogs/statistics.png',
     ],
     tags: [
-      'CSSModules',
-      'JWT',
-      'Javascript',
-      'Typescript',
-      'Next.js',
-      'ReactJS',
+      {text: 'CSSModules', link: 'projects?tag=CSSModules'},
+      {text: 'JWT', link: 'projects?tag=JWT'},
+      {text: 'Javascript', link: 'projects?tag=Javascript'},
+      {text: 'Typescript', link: 'projects?tag=Typescript'},
+      {text: 'Next.js', link: 'projects?tag=Next.js'},
+      {text: 'ReactJS', link: 'projects?tag=ReactJS'},
     ],
     area: ['FrontEnd'],
     technologies: [
@@ -61,7 +61,13 @@ export const projects: Project[] = [
     title: 'Alura Crypto',
     description: ['The first challenge of Oracle ONE.'],
     images: ['/AluraCrypto/project.png'],
-    tags: ['HTML', 'Javascript', 'CSS3', 'OracleOne', 'Alura'],
+    tags: [
+      {text: 'HTML', link: 'projects?tag=HTML'},
+      {text: 'Javascript', link: 'projects?tag=Javascript'},
+      {text: 'CSS3', link: 'projects?tag=CSS3'},
+      {text: 'OracleOne', link: 'projects?tag=OracleOne'},
+      {text: 'Alura', link: 'projects?tag=Alura'},
+    ],
     area: ['FrontEnd'],
     technologies: [
       {name: 'HTML5', icon: HTML5Icon},
@@ -90,11 +96,11 @@ export const projects: Project[] = [
       '/GithubPages/repository.png',
     ],
     tags: [
-      'Typescript',
-      'React',
-      'StyledComponents',
-      'GithubAPI',
-      'GoStackBootcamp',
+      {text: 'Typescript', link: 'projects?tag=Typescript'},
+      {text: 'React', link: 'projects?tag=React'},
+      {text: 'StyledComponents', link: 'projects?tag=StyledComponents'},
+      {text: 'GithubAPI', link: 'projects?tag=GithubAPI'},
+      {text: 'GoStackBootcamp', link: 'projects?tag=GoStackBootcamp'},
     ],
     area: ['Design', 'FrontEnd'],
     technologies: [
@@ -119,7 +125,12 @@ export const projects: Project[] = [
       '/FintechReact/home.png',
       '/FintechReact/logo.png',
     ],
-    tags: ['React', 'Typescript', 'CSSModules', 'APIConsume'],
+    tags: [
+      {text: 'React', link: 'projects?tag=React'},
+      {text: 'Typescript', link: 'projects?tag=Typescript'},
+      {text: 'CSSModules', link: 'projects?tag=CSSModules'},
+      {text: 'APIConsume', link: 'projects?tag=APIConsume'},
+    ],
     area: ['FullStack'],
     technologies: [
       {name: 'React', icon: ReactIcon},
@@ -138,7 +149,13 @@ export const projects: Project[] = [
     title: 'LinkedIn Cover v1.0',
     description: ['First linkedin cover. Inspired by Braun Design.'],
     images: ['LinkedInCoverV1/cover.png'],
-    tags: ['Figma', 'Cover', 'Banner', 'LinkedIn', 'Braun'],
+    tags: [
+      {text: 'Figma', link: 'projects?tag=Figma'},
+      {text: 'Cover', link: 'projects?tag=Cover'},
+      {text: 'Banner', link: 'projects?tag=Banner'},
+      {text: 'LinkedIn', link: 'projects?tag=LinkedIn'},
+      {text: 'Braun', link: 'projects?tag=Braun'},
+    ],
     area: ['Design'],
     technologies: [{name: 'Figma', icon: FigmaTechIcon}],
     view: [
@@ -157,7 +174,10 @@ export const projects: Project[] = [
       'https://picsum.photos/seed/project6-2/400/300',
       'https://picsum.photos/seed/project6-3/400/300',
     ],
-    tags: ['TagI', 'TagJ'],
+    tags: [
+      {text: 'TagI', link: 'projects?tag=TagI'},
+      {text: 'TagJ', link: 'projects?tag=TagJ'},
+    ],
     area: ['Design'],
     technologies: [
       {name: 'Vue.js', icon: JSIcon},
@@ -184,7 +204,10 @@ export const projects: Project[] = [
       'https://picsum.photos/seed/project7-2/400/300',
       'https://picsum.photos/seed/project7-3/400/300',
     ],
-    tags: ['TagK', 'TagL'],
+    tags: [
+      {text: 'TagK', link: 'projects?tag=TagK'},
+      {text: 'TagL', link: 'projects?tag=TagL'},
+    ],
     area: ['BackEnd'],
     technologies: [{name: 'Python', icon: JSIcon}],
     view: [
@@ -203,7 +226,10 @@ export const projects: Project[] = [
       'https://picsum.photos/seed/project8-2/400/300',
       'https://picsum.photos/seed/project8-3/400/300',
     ],
-    tags: ['TagM', 'TagN'],
+    tags: [
+      {text: 'TagM', link: 'projects?tag=TagM'},
+      {text: 'TagN', link: 'projects?tag=TagN'},
+    ],
     area: ['FullStack'],
     technologies: [
       {name: 'Angular', icon: JSIcon},
