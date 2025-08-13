@@ -59,12 +59,18 @@ export const projects: Project[] = [
   },
   {
     title: 'Alura Crypto',
-    description: ['The first challenge of Oracle ONE.'],
+    description: [
+      'Encryption App – Oracle ONE Final Challenge (Phase 1)',
+      ' Developed as the final challenge of the first phase of the Oracle ONE program, this project applied foundational concepts such as programming logic and basic front-end development.',
+      ' The solution is a Caesar cipher encoder/decoder built with HTML, CSS, and JavaScript. I implemented responsive design, applied the BEM CSS methodology, and introduced minor improvements to the original UI design.',
+    ],
     images: ['/AluraCrypto/project.png'],
     tags: [
       {text: 'HTML', link: 'projects?tag=HTML'},
       {text: 'Javascript', link: 'projects?tag=Javascript'},
       {text: 'CSS3', link: 'projects?tag=CSS3'},
+      {text: 'BEMCSS', link: 'projects?tag=BEMCSS'},
+      {text: 'ResponsiveDesign', link: 'projects?tag=ResponsiveDesign'},
       {text: 'OracleOne', link: 'projects?tag=OracleOne'},
       {text: 'Alura', link: 'projects?tag=Alura'},
     ],
@@ -89,7 +95,11 @@ export const projects: Project[] = [
   },
   {
     title: 'Github Explorer',
-    description: ['A frontend for github issues.'],
+    description: [
+      'A frontend for github issues.',
+      ' Front-end application for browsing issue lists from GitHub repositories. Initially developed during the GoStack Bootcamp, the project was later extended with new features and design improvements implemented independently.',
+      ' Built with React, TypeScript, and Styled Components, it consumes the GitHub API to retrieve and display repository data through a responsive and intuitive interface.',
+    ],
     images: [
       '/GithubPages/dashboard.png',
       '/GithubPages/search.png',
@@ -119,19 +129,24 @@ export const projects: Project[] = [
   },
   {
     title: 'Fintech Dashboard',
-    description: ['A dashboard to monitor sells of a fintech product.'],
+    description: [
+      'A dashboard to monitor sales of a fintech product.',
+      ' Sales monitoring dashboard for a fintech, developed during the React course by Origamid.',
+      ' Built with React, TypeScript, and CSS Modules, the project focuses on data visualization techniques using libraries such as Recharts, applying concepts related to dashboard UI and chart integration in React applications.',
+    ],
     images: [
       '/FintechReact/sells.png',
       '/FintechReact/home.png',
       '/FintechReact/logo.png',
     ],
     tags: [
-      {text: 'React', link: 'projects?tag=React'},
       {text: 'Typescript', link: 'projects?tag=Typescript'},
+      {text: 'React', link: 'projects?tag=React'},
       {text: 'CSSModules', link: 'projects?tag=CSSModules'},
+      {text: 'Recharts', link: 'projects?tag=Recharts'},
       {text: 'APIConsume', link: 'projects?tag=APIConsume'},
     ],
-    area: ['FullStack'],
+    area: ['FrontEnd'],
     technologies: [
       {name: 'React', icon: ReactIcon},
       {name: 'Typescript', icon: TSIcon},
@@ -147,7 +162,11 @@ export const projects: Project[] = [
   },
   {
     title: 'LinkedIn Cover v1.0',
-    description: ['First linkedin cover. Inspired by Braun Design.'],
+    description: [
+      'First linkedin cover. Inspired by Braun Design.',
+      ' Minimalist LinkedIn cover design created using Figma, inspired by the Braun design aesthetic. The visual style contrasts neutral tones with vibrant accents to achieve a clean and modern look.',
+      ' Three variations of the design were created, each with subtle differences in layout and composition.',
+    ],
     images: ['LinkedInCoverV1/cover.png'],
     tags: [
       {text: 'Figma', link: 'projects?tag=Figma'},
