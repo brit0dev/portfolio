@@ -15,5 +15,13 @@ export * from './technologies/StyledComponentsIcon';
 export * from './technologies/FigmaTechIcon';
 export * from './technologies/NextIcon';
 export * from './technologies/ReactIcon';
+export * from './technologies/SpringBootIcon';
+export * from './technologies/SpringIcon';
+export * from './technologies/JavaIcon';
+export * from './technologies/MongoIcon';
+export * from './technologies/ExpressJsIcon';
+export * from './technologies/MySQLIcon';
+export * from './technologies/PostgreSQL';
+
 export * from './ui/HandIcon';
 export * from './ui/CodeIcon';
