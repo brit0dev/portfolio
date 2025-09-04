@@ -6,13 +6,15 @@ import LanguagesIcon from '@/assets/LanguagesIcon.svg';
 
 export const educationCards: Education[] = [
   {
-    education: 'Estatística',
+    education: 'Statistics',
     acronym: 'UFPE',
     description: [
-      'Curso Estatística na Universidade Federal de Pernambuco (UFPE), uma formação que me proporciona uma base sólida em análise de dados, modelagem estatística e programação aplicada à solução de problemas reais. ',
-      'Desde o início do curso, venho desenvolvendo habilidades essenciais para atuar na área de Ciência de Dados, combinando conhecimentos de probabilidade, inferência estatística e técnicas computacionais.',
+      'Undergraduate program with strong emphasis on data analysis, statistical modeling, and computational methods.',
+      'Covered topics include Probability, Statistical Inference, Regression Models, Time Series Analysis, Experimental Design, and Multivariate Analysis, along with solid training in Calculus, Linear Algebra, and Optimization.',
+      'The program also included data-driven application development using tools like R, Python, and SQL, plus coursework in Algorithms, Numerical Methods, and Programming.',
+      'Hands-on experience in analyzing real-world datasets, building statistical models, and applying techniques for data-driven decision making.',
     ],
-    courseType: 'Graduação',
+    courseType: 'Bachelor’s Degree',
     initialYear: 2024,
     finalYear: 2028,
     status: 'In progress',
