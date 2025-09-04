@@ -13,7 +13,7 @@ const Education: React.FC = () => {
   return (
     <div>
       <h3 className="font-bold text-2xl mb-2 font-instrument">
-        <span className="text-orange-200">#</span> Escolaridade:
+        <span className="text-orange-200">#</span> Education:
       </h3>
       <div className="relative max-h-58 overflow-hidden">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-4 gap-4 p-1 xs:p-2">
