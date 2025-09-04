@@ -10,7 +10,7 @@ const SectionHeader = ({
   icon,
 }: SectionHeaderProps) => {
   const stickyClasses = isSticky ? 'sticky top-0 z-10' : '';
-  const onPageClasses = isOnPage ? 'bg-background-light' : 'bg-secondary';
+  const onPageClasses = isOnPage ? 'bg-background-light' : 'bg-secondary-light';
   const shadow = isShadow ? 'shadow-[1px_1px_2px_rgb(20,20,20,0.1)]' : '';
   const borderType = dashed
     ? 'dashed-border-b'
