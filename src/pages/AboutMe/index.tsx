@@ -47,8 +47,9 @@ const AboutMe = forwardRef<HTMLElement, SectionProps>(({isScrolled}, ref) => {
               className="relative xs:min-w-90 rounded-2xl h-[320px] overflow-hidden"
             >
               <img
-                src="https://ellun.com.br/wp-content/uploads/2020/06/shutterstock_374227048.jpg"
-                alt="Foto de exemplo"
+                src="/profile.svg"
+                alt="Profile picture"
+                title="Profile picture"
                 className="w-full h-full object-cover"
               />
               <div className="hidden sm:block lg:hidden absolute bottom-1 right-1 md:left-1 z-10 ">
