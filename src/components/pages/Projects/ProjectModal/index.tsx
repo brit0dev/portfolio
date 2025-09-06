@@ -1,11 +1,8 @@
 import {useEffect, useState, useRef} from 'react';
 import type {Project} from '@/types/pages/projects';
-import {
-  ExternalLinkIcon,
-  FigmaIcon,
-  GithubIcon,
-} from '@/components/common/icons';
+
 import TagList from '@/components/common/TagList';
+import {TECHNOLOGIES, VIEW_ICONS} from '@/components/common/icons/icons-maps';
 
 type ProjectModalProps = {
   project: Project;
@@ -62,12 +59,6 @@ const ProjectModal = ({project, onClose}: ProjectModalProps) => {
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  const viewIcons = {
-    demo: ExternalLinkIcon,
-    github: GithubIcon,
-    figma: FigmaIcon,
-  };
 
   return (
     <div
@@ -176,25 +167,30 @@ const ProjectModal = ({project, onClose}: ProjectModalProps) => {
                   Technologies:
                 </span>
 
-                {project.technologies.map(({name, icon: Icon}) => (
-                  <span
-                    key={name}
-                    className="flex items-center gap-1.5 text-text-dark lg:pl-1 lg:pr-3 rounded-lg"
-                  >
-                    <Icon className="rounded-lg w-7.5 h-7.5" />
-                    <span className="max-lg:hidden">{name}</span>
-                  </span>
-                ))}
+                {project.technologies.map((technology) => {
+                  const Icon = TECHNOLOGIES[technology].icon;
+                  return (
+                    <span
+                      key={technology}
+                      className="flex items-center gap-1.5 text-text-dark lg:pl-1 lg:pr-3 rounded-lg"
+                    >
+                      <Icon className="rounded-lg w-7.5 h-7.5" />
+                      <span className="max-lg:hidden">
+                        {TECHNOLOGIES[technology].name}
+                      </span>
+                    </span>
+                  );
+                })}
               </div>
             </div>
           </div>
-          <p className="flex flex-col gap-2 text-text-primary md:text-lg py-4 px-4">
+          <div className="flex flex-col gap-2 text-text-primary md:text-lg py-4 px-4">
             {project.description.slice(1).map((paragraph, index) => (
               <p key={index} className="">
                 {paragraph}
               </p>
             ))}
-          </p>
+          </div>
         </div>
 
         <div className="px-4 py-4 flex flex-wrap sm:flex-nowrap justify-between gap-y-1.5 gap-x-20 bg-primary/20 overflow-hidden">
@@ -204,7 +200,7 @@ const ProjectModal = ({project, onClose}: ProjectModalProps) => {
             </span>
             <div className="flex gap-1 items-center">
               {project.view?.map(({type, link}, index) => {
-                const Icon = viewIcons[type];
+                const Icon = VIEW_ICONS[type];
                 return (
                   <a
                     key={type}

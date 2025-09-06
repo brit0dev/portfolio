@@ -33,7 +33,7 @@ const Projects = ({isScrolled}: SectionProps) => {
       >
         Projects
       </SectionHeader>
-      <div className="grid bg-background-light grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-5 py-5 px-3 xs:px-5 md:px-7 ">
+      <div className="grid bg-background-light grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 md:gap-5 py-5 px-3 xs:px-5 md:px-7 ">
         {projects.map((project) => (
           <ProjectCard
             key={project.title}

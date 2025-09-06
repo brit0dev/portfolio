@@ -1,24 +1,5 @@
-import {
-  JSIcon,
-  GithubIcon,
-  FigmaIcon,
-  ExternalLinkIcon,
-  ReactIcon,
-  TSIcon,
-  CSSModulesIcon,
-  HTML5Icon,
-  CSS3Icon,
-  StyledComponentsIcon,
-  FigmaTechIcon,
-  SpringBootIcon,
-  SpringIcon,
-  JavaIcon,
-  MongoIcon,
-  ExpressJsIcon,
-  MySQLIcon,
-  PostgreSQLIcon,
-} from '@/components/common/icons';
 import type {Project} from '@/types/pages/projects';
+const today = new Date().toISOString().split('T')[0];
 
 export const projects: Project[] = [
   {
@@ -46,21 +27,15 @@ export const projects: Project[] = [
       {text: 'ReactJS', link: 'projects?tag=ReactJS'},
     ],
     area: ['FrontEnd'],
-    technologies: [
-      {name: 'React', icon: ReactIcon},
-      {name: 'CSS Modules', icon: CSSModulesIcon},
-      {name: 'Javascript', icon: JSIcon},
-    ],
+    technologies: ['React', 'CSS Modules', 'Javascript'],
     view: [
       {
-        type: 'demo' as const,
+        type: 'Deploy',
         link: 'https://socialdogs.britodev.com',
-        icon: ExternalLinkIcon,
       },
       {
-        type: 'github' as const,
+        type: 'Github',
         link: 'https://github.com/brit0dev/social-dogs',
-        icon: GithubIcon,
       },
     ],
   },
@@ -82,21 +57,15 @@ export const projects: Project[] = [
       {text: 'Alura', link: 'projects?tag=Alura'},
     ],
     area: ['FrontEnd'],
-    technologies: [
-      {name: 'HTML5', icon: HTML5Icon},
-      {name: 'CSS3', icon: CSS3Icon},
-      {name: 'Javascript', icon: JSIcon},
-    ],
+    technologies: ['HTML5', 'CSS3', 'Javascript'],
     view: [
       {
-        type: 'demo' as const,
+        type: 'Deploy',
         link: 'https://brit0dev.github.io/challenge-alura-oracle-one-01/',
-        icon: ExternalLinkIcon,
       },
       {
-        type: 'github' as const,
+        type: 'Github',
         link: 'https://github.com/brit0dev/challenge-alura-oracle-one-01',
-        icon: GithubIcon,
       },
     ],
   },
@@ -120,17 +89,12 @@ export const projects: Project[] = [
       {text: 'GoStackBootcamp', link: 'projects?tag=GoStackBootcamp'},
     ],
     area: ['Design', 'FrontEnd'],
-    technologies: [
-      {name: 'Typescript', icon: JSIcon},
-      {name: 'Styled Components', icon: StyledComponentsIcon},
-      {name: 'React', icon: ReactIcon},
-    ],
+    technologies: ['Typescript', 'Styled Components', 'React'],
 
     view: [
       {
-        type: 'github' as const,
+        type: 'Github',
         link: 'https://github.com/brit0dev/githubpages',
-        icon: GithubIcon,
       },
     ],
   },
@@ -154,16 +118,11 @@ export const projects: Project[] = [
       {text: 'APIConsume', link: 'projects?tag=APIConsume'},
     ],
     area: ['FrontEnd'],
-    technologies: [
-      {name: 'React', icon: ReactIcon},
-      {name: 'Typescript', icon: TSIcon},
-      {name: 'CSS Modules', icon: CSSModulesIcon},
-    ],
+    technologies: ['React', 'Typescript', 'CSS Modules'],
     view: [
       {
-        type: 'github' as const,
+        type: 'Github',
         link: 'https://github.com/brit0dev/fintech-front-end_react',
-        icon: GithubIcon,
       },
     ],
   },
@@ -183,12 +142,11 @@ export const projects: Project[] = [
       {text: 'Braun', link: 'projects?tag=Braun'},
     ],
     area: ['Design'],
-    technologies: [{name: 'Figma', icon: FigmaTechIcon}],
+    technologies: ['Figma'],
     view: [
       {
-        type: 'figma' as const,
+        type: 'Figma',
         link: 'https://figma.com/file/project5',
-        icon: FigmaIcon,
       },
     ],
   },
@@ -202,7 +160,7 @@ export const projects: Project[] = [
       'During the development, I gained experience in implementing secure authentication mechanisms, organizing code following clean architecture principles, and managing database migrations and interactions with JPA.',
     ],
     images: [
-      `https://opengraph.githubassets.com/${Date.now()}/brit0dev/forumhub-api`,
+      `https://opengraph.githubassets.com/${today}/brit0dev/forumhub-api`,
     ],
     tags: [
       {text: 'Java', link: 'projects?tag=Java'},
@@ -216,16 +174,11 @@ export const projects: Project[] = [
       {text: 'CleanArchitecture', link: 'projects?tag=CleanArchitecture'},
     ],
     area: ['BackEnd'],
-    technologies: [
-      {name: 'Java', icon: JavaIcon},
-      {name: 'Spring Boot', icon: SpringBootIcon},
-      {name: 'MySQL', icon: MySQLIcon},
-    ],
+    technologies: ['Java', 'Spring Boot', 'MySQL'],
     view: [
       {
-        type: 'github' as const,
+        type: 'Github',
         link: 'https://github.com/brit0dev/forumhub-api',
-        icon: GithubIcon,
       },
     ],
   },
@@ -237,9 +190,7 @@ export const projects: Project[] = [
       'The software provides functionalities for inserting, listing, editing, and deleting records, which are stored in a PostgreSQL database. It is designed to streamline book and author management directly from the command line, offering a seamless user experience for interacting with the data.',
       'Throughout the project, I worked with Spring’s core features, such as dependency injection and repository management, and integrated with PostgreSQL to store the data. This project also helped me deepen my understanding of database management and CLI development in Java.',
     ],
-    images: [
-      `https://opengraph.githubassets.com/${Date.now()}/brit0dev/literalura`,
-    ],
+    images: [`https://opengraph.githubassets.com/${today}/brit0dev/literalura`],
     tags: [
       {text: 'Java', link: 'projects?tag=Java'},
       {text: 'SpringBoot', link: 'projects?tag=SpringBoot'},
@@ -249,16 +200,11 @@ export const projects: Project[] = [
       {text: 'CleanArchitecture', link: 'projects?tag=CleanArchitecture'},
     ],
     area: ['BackEnd'],
-    technologies: [
-      {name: 'Java', icon: JavaIcon},
-      {name: 'Spring Framework', icon: SpringIcon},
-      {name: 'PostgreSQL', icon: PostgreSQLIcon},
-    ],
+    technologies: ['Java', 'Spring Framework', 'PostgreSQL'],
     view: [
       {
-        type: 'github' as const,
+        type: 'Github',
         link: 'https://github.com/brit0dev/literalura',
-        icon: GithubIcon,
       },
     ],
   },
@@ -272,7 +218,7 @@ export const projects: Project[] = [
       'During development, I deepened my knowledge of asynchronous JavaScript with Promises and async/await, as well as working with middlewares for validation and error handling.',
     ],
     images: [
-      `https://opengraph.githubassets.com/${Date.now()}/brit0dev/blogado-api`,
+      `https://opengraph.githubassets.com/${today}/brit0dev/blogado-api`,
     ],
     tags: [
       {text: 'Javascript', link: 'projects?tag=Javascript'},
@@ -283,16 +229,11 @@ export const projects: Project[] = [
       {text: 'CleanArchitecture', link: 'projects?tag=CleanArchitecture'},
     ],
     area: ['BackEnd'],
-    technologies: [
-      {name: 'Javascript', icon: JSIcon},
-      {name: 'Express.js', icon: ExpressJsIcon},
-      {name: 'MongoDB', icon: MongoIcon},
-    ],
+    technologies: ['Javascript', 'Express.js', 'MongoDB'],
     view: [
       {
-        type: 'github' as const,
+        type: 'Github',
         link: 'https://github.com/brit0dev/blogado-api',
-        icon: GithubIcon,
       },
     ],
   },

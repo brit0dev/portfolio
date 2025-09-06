@@ -1,6 +1,7 @@
 import React from 'react';
 import type {Project} from '@/types/pages/projects';
 import TagList from '@/components/common/TagList';
+import {TECHNOLOGIES, VIEW_ICONS} from '@/components/common/icons/icons-maps';
 
 type ProjectCardProps = Project & {
   onCardClick: (project: Project) => void;
@@ -11,7 +12,7 @@ const ProjectCard = (props: ProjectCardProps) => {
   return (
     <div className="flex flex-col border-primary-dark min-w-50 border-1 shadow-sm bg-background-light rounded-[0.625rem] overflow-hidden">
       <div
-        className="relative grid grid-cols-2 grid-rows-2 bg-background-light gap-0.5 h-53 xs:h-60 cursor-pointer"
+        className="group relative grid grid-cols-2 grid-rows-2 bg-background-light gap-0.5 h-53 xs:h-60 cursor-pointer"
         onClick={() => props.onCardClick(props)}
       >
         {images.length > 2 ? (
@@ -20,18 +21,23 @@ const ProjectCard = (props: ProjectCardProps) => {
             .map((image, index) => (
               <img
                 src={image}
-                alt={`${title} screenshot ${index}`}
-                key={`${title} screenshot ${index}`}
+                alt={`${title} image ${index}`}
+                key={`${title} image ${index}`}
                 className="first:row-span-2 w-full h-full object-cover"
               />
             ))
         ) : (
           <img
             src={images[0]}
-            alt={`${title} screenshot`}
+            alt={`${title} image`}
             className="row-span-2 col-span-2 w-full h-full object-cover"
           />
         )}
+        <div className="absolute top-0 left-0 bottom-0 right-0 opacity-0 group-hover:opacity-100 bg-black/15 select-none transition flex items-center justify-center">
+          <div className="translate-y-6.5 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition bg-background-light px-4 py-1.5 rounded-2xl text-text-dark">
+            See more
+          </div>
+        </div>
 
         <div className="absolute top-1.25 left-1.25 z-1 flex items-center gap-2 px-1.5 bg-background border-1 border-button-border rounded-md overflow-hidden select-none">
           {area.map((area, index) => (
@@ -49,13 +55,13 @@ const ProjectCard = (props: ProjectCardProps) => {
       <div className="relative flex h-0.75 bg-secondary">
         <div className="absolute -top-6 right-1.5 flex items-center h-11 bg-background-light gap-1 py-0.5 px-1 drop-shadow-md rounded-lg">
           {technologies
-            .sort((a, b) => b.name.localeCompare(a.name))
-            .map((item) => {
-              const Icon = item.icon;
+            .sort((a, b) => b.localeCompare(a))
+            .map((technology) => {
+              const Icon = TECHNOLOGIES[technology].icon;
               return (
                 <span
-                  key={title + '-technology:' + item.name}
-                  title={item.name}
+                  key={title + '-technology:' + technology}
+                  title={TECHNOLOGIES[technology].name}
                   className="w-9 h-9"
                 >
                   <Icon className="rounded-md w-9 h-9" />
@@ -81,7 +87,7 @@ const ProjectCard = (props: ProjectCardProps) => {
             <div className="relative">
               <div className="z-0 relative flex items-center bg-secondary-darker border-1 border-b-0 border-r-0 border-primary-dark text-white px-2.75 p-1 rounded-tl-lg space-x-2">
                 {view.map((item, index) => {
-                  const Icon = item.icon;
+                  const Icon = VIEW_ICONS[item.type];
                   return (
                     <React.Fragment key={title + '-tag:' + index}>
                       <a
