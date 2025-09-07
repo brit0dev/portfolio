@@ -60,7 +60,7 @@ const BioSidebar: React.FC = () => {
               <div>
                 <PhoneIcon />
               </div>
-              <span>+55 (81) 9 99889959</span>
+              <span>+55 (81) 9 8168-8979</span>
             </li>
           </ul>
           <div className="flex justify-end sm:hidden lg:flex relative md:absolute xl:relative bottom-0 right-0  lg:translate-y-[65%] lg:translate-x-[5%] xl:translate-y-[0.25rem] xl:translate-x-[0.5rem] col-start-1 col-span-2 lg:col-start-2 lg:col-span-1 xl:col-start-1 xl:col-span-2 row-start-2">

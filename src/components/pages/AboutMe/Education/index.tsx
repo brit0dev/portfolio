@@ -26,7 +26,7 @@ const Education: React.FC = () => {
           className="absolute bottom-2 right-0.25 z-10 flex items-center bg-button-text border-[1px] hover:border-button-text transition-all border-button-border shadow-md rounded-lg overflow-hidden text-white"
         >
           <span className="bg-button py-0.5 px-2.5 rounded-md font-semibold text-button-text hover:text-text-primary hover:transition">
-            Exibir Mais
+            See More
           </span>
           <span className="px-2.5 text-l font-medium">+</span>
         </button>

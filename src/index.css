@@ -7,17 +7,17 @@
 
   --color-base-dark: #0d0d0d;
 
-  --color-background: #FFF9F2;
+  --color-background: #fff9f2;
   --color-background-light: #fffefd;
-  --color-background-header: #FFF5DB;
+  --color-background-header: #fff5db;
 
-  --color-primary: #FFC78F;
+  --color-primary: #ffc78f;
   --color-primary-dark: #c38a48;
 
-  --color-secondary-light: #FFCC6E;
+  --color-secondary-light: #ffcc6e;
   --color-secondary: #ffcd71;
   --color-secondary-dark: #f6b76e;
-  --color-secondary-darker: #F69A49;
+  --color-secondary-darker: #f69a49;
 
   --color-text-primary: #211900;
   --color-text-secondary: #7a6e50;
@@ -33,9 +33,9 @@
   --color-accent: #dacba2;
   --color-accent-dark: #bf9f7a;
 
-  --color-success: #C1F68B;
+  --color-success: #c1f68b;
   --color-success-text: #5d7237;
-  --color-success-border: #76A844;
+  --color-success-border: #76a844;
 
   --color-ongoing: #fdd35d;
   --color-ongoing-text: #8a6901;
@@ -120,7 +120,6 @@ button {
   cursor: pointer;
 }
 
-button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }

@@ -146,7 +146,7 @@ export const projects: Project[] = [
     view: [
       {
         type: 'Figma',
-        link: 'https://figma.com/file/project5',
+        link: 'https://www.figma.com/design/5pWH9MQgabXGLIuEYnztVh/LinkedIn-Cover-v1.0',
       },
     ],
   },
@@ -213,9 +213,9 @@ export const projects: Project[] = [
     description: [
       'A simple API built to manage blog posts.',
       'This project was developed to practice creating CRUD APIs in JavaScript, focused on managing blog posts. The API follows RESTful standards and was designed using best architectural practices, including the Repository and Controller design patterns.',
-      'The API was built with Express.js, a minimalist framework for Node.js, which made route creation and application structuring easier. It uses MongoDB as the database for storing posts, with Mongoose acting as the ODM (Object Data Modeling) to simplify database interaction.',
-      'The API offers basic CRUD operations (Create, Read, Update, Delete), with efficient and secure endpoints for post management. The modular structure of the application ensures easy maintenance and future scalability.',
-      'During development, I deepened my knowledge of asynchronous JavaScript with Promises and async/await, as well as working with middlewares for validation and error handling.',
+      'The API was built with Express.js and uses MongoDB for data storage, with Mongoose as the ODM for easier database interaction.',
+      'It provides CRUD operations (Create, Read, Update, Delete) through secure endpoints. The modular structure ensures easy maintenance and scalability.',
+      'During development, I improved my knowledge of asynchronous JavaScript with Promises and async/await, and worked with middlewares for validation and error handling.',
     ],
     images: [
       `https://opengraph.githubassets.com/${today}/brit0dev/blogado-api`,
