@@ -57,7 +57,7 @@ export const educationCards: Education[] = [
   },
 
   {
-    education: 'Projetão',
+    education: 'Fit.AI',
     acronym: 'UFPE',
     description: [
       'Multidisciplinary extension project developed at the Center for Informatics (CIn) of UFPE, using an institutional project methodology focused on problem-solving through collaborative teamwork.',
@@ -220,6 +220,7 @@ export const stackList = [
     symbol: FrameworksIcon,
     stackList: [
       'ReactJS',
+      'Next.js',
       'React Native',
       'Spring Boot',
       'Node.js',

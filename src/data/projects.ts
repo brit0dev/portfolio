@@ -9,14 +9,14 @@ export const projects: Project[] = [
       'This project was created during the ReactJS course by Origamid, with the goal of building a photo-sharing platform inspired by Instagram — but entirely focused on dogs.',
       'I built key features like secure login using JWT authentication, a live feed of recent dog photos, modal-based post viewing with comments, and full post pages including image, description, and feedback. I also added a user dashboard for managing personal posts and checking individual post statistics.',
       'The project helped me solidify many essential React concepts, including Hooks like useState, useEffect, and useReducer, the use of custom hooks, form handling, navigation with React Router, and shared state with the Context API. I also worked with CSS Modules for scoped styling and PropTypes for type checking, all within a functional component structure.',
-      'All the backend data came from an API provided by Origamid. A live demo is linked in the project section.',
+      'All the backend data came from an API provided by Origamid. A demo account have username = "dog", password = "dog".',
     ],
     images: [
-      '/SocialDogs/home.png',
-      '/SocialDogs/postfeed.png',
-      '/SocialDogs/login.png',
-      '/SocialDogs/myaccount.png',
-      '/SocialDogs/statistics.png',
+      'SocialDogs/home.png',
+      'SocialDogs/postfeed.png',
+      'SocialDogs/login.png',
+      'SocialDogs/myaccount.png',
+      'SocialDogs/statistics.png',
     ],
     tags: [
       {text: 'CSSModules', link: 'projects?tag=CSSModules'},
@@ -31,7 +31,7 @@ export const projects: Project[] = [
     view: [
       {
         type: 'Deploy',
-        link: 'https://socialdogs.britodev.com',
+        link: 'https://brit0dev.github.io/social-dogs/',
       },
       {
         type: 'Github',
@@ -40,13 +40,43 @@ export const projects: Project[] = [
     ],
   },
   {
+    title: 'Github Explorer',
+    description: [
+      'A frontend for github issues.',
+      ' Front-end application for browsing issue lists from GitHub repositories. Initially developed during the GoStack Bootcamp, the project was later extended with new features and design improvements implemented independently.',
+      ' Built with React, TypeScript, and Styled Components, it consumes the GitHub API to retrieve and display repository data through a responsive and intuitive interface.',
+    ],
+    images: [
+      'GithubPages/dashboard.png',
+      'GithubPages/search.png',
+      'GithubPages/repository.png',
+    ],
+    tags: [
+      {text: 'Typescript', link: 'projects?tag=Typescript'},
+      {text: 'React', link: 'projects?tag=React'},
+      {text: 'StyledComponents', link: 'projects?tag=StyledComponents'},
+      {text: 'GithubAPI', link: 'projects?tag=GithubAPI'},
+      {text: 'GoStackBootcamp', link: 'projects?tag=GoStackBootcamp'},
+    ],
+    area: ['Design', 'FrontEnd'],
+    technologies: ['Typescript', 'Styled Components', 'React'],
+
+    view: [
+      {type: 'Deploy', link: 'https://brit0dev.github.io/github-explorer/'},
+      {
+        type: 'Github',
+        link: 'https://github.com/brit0dev/github-explorer',
+      },
+    ],
+  },
+  {
     title: 'Alura Crypto',
     description: [
       'Encryption App – Oracle ONE Final Challenge (Phase 1)',
-      ' Developed as the final challenge of the first phase of the Oracle ONE program, this project applied foundational concepts such as programming logic and basic front-end development.',
-      ' The solution is a Caesar cipher encoder/decoder built with HTML, CSS, and JavaScript. I implemented responsive design, applied the BEM CSS methodology, and introduced minor improvements to the original UI design.',
+      'Developed as the final challenge of the first phase of the Oracle ONE program, this project applied foundational concepts such as programming logic and basic front-end development.',
+      'The solution is a Caesar cipher encoder/decoder built with HTML, CSS, and JavaScript. I implemented responsive design, applied the BEM CSS methodology, and introduced minor improvements to the original UI design.',
     ],
-    images: ['/AluraCrypto/project.png'],
+    images: ['AluraCrypto/project.png'],
     tags: [
       {text: 'HTML', link: 'projects?tag=HTML'},
       {text: 'Javascript', link: 'projects?tag=Javascript'},
@@ -70,35 +100,6 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: 'Github Explorer',
-    description: [
-      'A frontend for github issues.',
-      ' Front-end application for browsing issue lists from GitHub repositories. Initially developed during the GoStack Bootcamp, the project was later extended with new features and design improvements implemented independently.',
-      ' Built with React, TypeScript, and Styled Components, it consumes the GitHub API to retrieve and display repository data through a responsive and intuitive interface.',
-    ],
-    images: [
-      '/GithubPages/dashboard.png',
-      '/GithubPages/search.png',
-      '/GithubPages/repository.png',
-    ],
-    tags: [
-      {text: 'Typescript', link: 'projects?tag=Typescript'},
-      {text: 'React', link: 'projects?tag=React'},
-      {text: 'StyledComponents', link: 'projects?tag=StyledComponents'},
-      {text: 'GithubAPI', link: 'projects?tag=GithubAPI'},
-      {text: 'GoStackBootcamp', link: 'projects?tag=GoStackBootcamp'},
-    ],
-    area: ['Design', 'FrontEnd'],
-    technologies: ['Typescript', 'Styled Components', 'React'],
-
-    view: [
-      {
-        type: 'Github',
-        link: 'https://github.com/brit0dev/githubpages',
-      },
-    ],
-  },
-  {
     title: 'Fintech Dashboard',
     description: [
       'A dashboard to monitor sales of a fintech product.',
@@ -106,9 +107,9 @@ export const projects: Project[] = [
       ' Built with React, TypeScript, and CSS Modules, the project focuses on data visualization techniques using libraries such as Recharts, applying concepts related to dashboard UI and chart integration in React applications.',
     ],
     images: [
-      '/FintechReact/sells.png',
-      '/FintechReact/home.png',
-      '/FintechReact/logo.png',
+      'FintechReact/sells.png',
+      'FintechReact/home.png',
+      'FintechReact/logo.png',
     ],
     tags: [
       {text: 'Typescript', link: 'projects?tag=Typescript'},

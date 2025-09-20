@@ -6,24 +6,25 @@ import SocialList from '../SocialList';
 
 const BioSidebar: React.FC = () => {
   return (
-    <div className="grid px-2 flex-1 xl:px-3 py-2 xl:py-3 md:grid-cols-[1fr_auto] gap-2 xl:grid-cols-1 md:col-span-2 xl:col-span-1  bg-background-light shadow rounded-2xl">
+    <div className="grid flex-1 md:grid-cols-[1fr_auto_auto] xl:grid-cols-1 xl:grid-rows-[auto_auto_1fr] md:col-span-2 xl:col-span-1  bg-background-light shadow rounded-2xl">
       <div
         id="bio-image"
-        className="relative xs:min-w-90 rounded-2xl h-[320px] overflow-hidden"
+        className="relative xs:min-w-90 h-[320px] max-md:rounded-t-2xl md:rounded-l-2xl xl:rounded-bl-none xl:rounded-t-2xl overflow-hidden"
       >
         <img
-          src="/profile.svg"
+          src="profile.jpg"
           alt="Profile picture"
           title="Profile picture"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-right"
         />
         <div className="hidden sm:block lg:hidden absolute bottom-1 right-1 md:left-1 z-10 ">
           <SocialList />
         </div>
       </div>
+      <div id="bio-separator" className="h-0.75 bg-text-dark"></div>
       <div
         id="bio-content"
-        className="relative flex flex-col max-sm:gap-y-2.5 gap-2 2xl:gap-2.5 md:max-w-110 lg:max-w-126 xl:max-w-full justify-center px-1 md:px-2 py-1"
+        className="relative flex flex-col max-sm:gap-y-2.5 gap-2 2xl:gap-2.5 md:max-w-110 lg:max-w-128 xl:max-w-full justify-between px-3 md:px-4 py-3 lg:px-3 xl:py-4 xl:px-4"
       >
         <div className="flex flex-col justify-between">
           <p className="indent-3">
@@ -63,7 +64,7 @@ const BioSidebar: React.FC = () => {
               <span>+55 (81) 9 8168-8979</span>
             </li>
           </ul>
-          <div className="flex justify-end sm:hidden lg:flex relative md:absolute xl:relative bottom-0 right-0  lg:translate-y-[65%] lg:translate-x-[5%] xl:translate-y-[0.25rem] xl:translate-x-[0.5rem] col-start-1 col-span-2 lg:col-start-2 lg:col-span-1 xl:col-start-1 xl:col-span-2 row-start-2">
+          <div className="flex justify-end sm:hidden lg:flex relative md:absolute xl:relative bottom-0 right-0  lg:translate-y-[65%] lg:translate-x-[5%] xl:translate-y-1 xl:translate-x-1 col-start-1 col-span-2 lg:col-start-2 lg:col-span-1 xl:col-start-1 xl:col-span-2 row-start-2">
             <SocialList />
           </div>
         </div>
